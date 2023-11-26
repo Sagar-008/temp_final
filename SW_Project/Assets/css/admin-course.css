@@ -1,0 +1,259 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: open sans;
+}
+
+.wrapper{
+    height: 100vh;
+    width: 100vw;
+    background-image: url(https://img.freepik.com/free-photo/blue-abstract-gradient-wave-wallpaper_53876-108364.jpg?size=626&ext=jpg&ga=GA1.1.1929311289.1694337303&semt=ais);
+    background-size: cover;
+}
+
+.upperbar{
+    
+    display: flex;
+    height: 8.5vh;
+}
+
+.weblogoplace{
+    
+    width: 20vw;
+    height: 8.5vh;
+    background-color: rgba(195, 206, 226,0.4);
+}
+.webnameplace{
+    
+    width: 80vw;
+    height: 8.5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(195, 206, 226,0.4);
+}
+
+.sidenav
+{
+    width: 20vw;
+    height: 91.5vh;
+    background-color: rgba(195, 206, 226,0.4);
+    
+}
+.sidenavopt{
+    width: 20vw;
+    height: 83vh;
+    border: 0.1px solid white;
+    overflow-y: auto;
+}
+.sidenavdown{
+    width: 20vw;
+    height: 8.5vh;
+    
+}
+
+
+.downflex{
+    display: flex;
+}
+
+#weblogoimg
+{
+    height: 100%;
+    width: 100%;
+}
+
+.webname{
+    font-size: 5vh;
+}
+
+.sidenavopt li{
+    
+    height: 6vh;
+    
+    margin-bottom: 1vh;
+}
+
+.sidenavopt ul{
+    margin-top: 4vh;
+}
+.sidenavopt ul li a{
+    
+    font-size: 2.5vh;
+    color: black;
+    text-decoration: none;
+    margin-left: 0.7vw;
+    margin-bottom: 12vh;
+}
+
+.sidenavdown{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.curruserlogo{
+    
+    height: 80%;
+    width: 15%;
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWZWFVq0QIidGN0ioQJHhNBoEr1DvlH_yR05nH2_uz3tku7PvXWnDGshe5PHLqxQ91oMQ&usqp=CAU");
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-radius: 7vh;
+}
+
+.currusername
+{
+    font-size: 3vh;
+    margin-left: -2vw;
+    
+    
+}
+
+.content{
+    
+    width: 80vw;
+    height: 91.5vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+select{
+    /* border: 2px solid red; */
+    height: 4vh;
+    width: 13vw;
+    font-size: 2.5vh;
+  
+    background: transparent;
+    border: none;
+    outline: none;
+}
+
+/* background-color: rgba(195, 206, 226,0.4); */
+option{
+    background-color: rgba(170, 206, 226, 0.4);
+    border: none;
+    outline: none;
+}
+
+/* common page ends hreer */
+/* ////////////////////////////////////////////////////////////// */
+
+.table-wrapper{
+    
+    max-height: 65vh;
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: auto;
+    
+    
+}
+
+table{
+    
+    width: 90%;
+    
+    border-collapse: separate;
+    border-spacing: 2.4vh 2vw;
+    height: 100%;
+    position: relative;
+    
+    table-layout: fixed;
+}
+
+
+
+
+th{
+    
+    height: 8vh;
+    font-size: 2.62vh;
+    color: white;
+    background-color: rgb(2, 26, 51);
+    /* border-left: 1vh solid transparent;
+    border-right: 1vh solid transparent;
+    background-clip: padding-box; */
+    border-radius: 10px;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+
+
+td{
+    background-color: rgba(195, 206, 226,0.4);
+    border-radius: 10px;
+}
+
+
+
+
+.leftpad{
+    height: 8vh;
+    font-size: 2.4vh;
+    padding-left: 0.8vw;
+}
+
+.center{
+    height: 8vh;
+    justify-content: center;
+    align-items: center;  
+}
+
+.center-items{
+    font-size: 2.6vh;
+}
+
+
+
+table tbody tr td a{
+    text-decoration: none;
+    color:  rgb(2, 26, 51);
+}
+
+table tbody tr td a i{
+    transform: scale(0.8);
+}
+
+
+tr:hover{
+    transform: scale(1.01);
+	transition: 0.1s;
+}
+
+.btn-place{
+    
+    height: 6vh;
+    width: 71.5%;
+    margin-bottom: 2vh;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    
+    
+}
+
+.btn{
+    color: white;
+    background-color: rgb(3, 142, 1);
+    border: 1px solid whitesmoke;
+    height: 6vh;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    border-radius: 10px;
+    font-size: 2.5vh;
+  
+  }
+  
+  .btn:hover{
+      transition: 0.2s;
+      transform: scale(1.1);
+  }

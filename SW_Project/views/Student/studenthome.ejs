@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/student-common-page.css">
+    <link rel="stylesheet" href="css/student-home-page.css">
+    <script src="https://kit.fontawesome.com/300fc8e5c2.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="upperbar">
+            <div class="weblogoplace">
+                <img src="img/logo.png" alt="not rendered" id="weblogoimg">
+            </div>
+            <div class="webnameplace">
+                <div class="webname"><p id="temp1">Student Information System</p></div>
+            </div>        
+        </div>
+        <div class="downflex">
+        <div class="sidenav" action="/studenthome" , method="post">
+            <div class="sidenavopt">
+                <ul>
+                    <li><a href="/studenthome" class="bcolor"><i class="fa-solid fa-house"></i> Home </a></li>
+                    <li><a href="/viewstudent" class="bcolor"><i class="fa-solid fa-user"></i> Student Details </a></li>
+                    <li><a href="/viewgrade" class="bcolor"><i class="fa-solid fa-file"></i>&nbsp;Grade Reports</a></li>
+                    <li><a href="/viewattendence"><i class="fa-solid fa-clipboard"></i>&nbsp;Attendence </a></li>
+                    <li><a href="/courseregistration"><i class="fa fa-list-alt" aria-hidden="true"></i>&nbsp;Course Registration </a></li>
+                    <li><a href="/student-announcement"><i class="fa fa-bullhorn" aria-hidden="true"></i>&nbsp;Announcement </a></li>
+                    <li><a href="/changepwdstudent"><i class="fa-solid fa-key"></i> Change Password </a></li>
+                    <li><a  href="/logoutstudent"><i class="fa-solid fa-right-to-bracket"></i> Logout </a></li>
+                  </ul>
+            </div>
+            <div class="sidenavdown">
+                <div class="curruserlogo">
+    
+                </div>
+                <div class="currusername">
+                    <%= student[0].firstname%>
+                </div>
+            </div>
+        </div>
+    
+        <div class="content">
+       
+            <div class="place-for-tag">
+             <div class="welcome-place">
+             <p>Welcome </p>
+             </div>
+             
+             <br>
+             <div class="username-place">
+             <p> <%= student[0].firstname%> !</p>
+             </div>
+            </div>
+         <!-- content     -->
+         </div>
+       
+            
+     <!-- content     -->
+    </div>
+
+    
+    <!-- downflex -->
+    </div>
+
+    <!-- wrapper -->
+    </div>
+    <script src="js/student-profile.js"></script>
+</body>
+</html>
+</body>
+</html>

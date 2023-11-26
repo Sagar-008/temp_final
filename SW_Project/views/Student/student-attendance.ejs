@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/student-common-page.css">
+  <link rel="stylesheet" href="css/student-attendance.css">
+  <link rel="stylesheet" href="student-attendance.css">
+  <script src="https://kit.fontawesome.com/300fc8e5c2.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="upperbar">
+      <div class="weblogoplace">
+        <img src="img/logo.png" alt="not rendered" id="weblogoimg">
+      </div>
+      <div class="webnameplace">
+        <div class="webname">
+          <p id="temp1">Student Information System</p>
+        </div>
+      </div>
+    </div>
+    <div class="downflex">
+      <div class="sidenav" action="/studenthome" , method="post">
+        <div class="sidenavopt">
+          <ul>
+            <li><a href="/studenthome" class="bcolor"><i class="fa-solid fa-house"></i> Home </a></li>
+            <li><a href="/viewstudent" class="bcolor"><i class="fa-solid fa-user"></i> Student Details </a></li>
+            <li><a href="/viewgrade" class="bcolor"><i class="fa-solid fa-file"></i>&nbsp;Grade Reports</a></li>
+            <li><a href="/viewattendence"><i class="fa-solid fa-clipboard"></i>&nbsp;Attendence </a></li>
+            <li><a href="/courseregistration"><i class="fa fa-list-alt" aria-hidden="true"></i>&nbsp;Course Registration
+              </a></li>
+            <li><a href="/student-announcement"><i class="fa fa-bullhorn" aria-hidden="true"></i>&nbsp;Announcement </a>
+            </li>
+            <li><a href="/changepwdstudent"><i class="fa-solid fa-key"></i> Change Password </a></li>
+            <li><a href="/logoutstudent"><i class="fa-solid fa-right-to-bracket"></i> Logout </a></li>
+          </ul>
+        </div>
+        <div class="sidenavdown">
+          <div class="curruserlogo">
+
+          </div>
+          <div class="currusername">
+            <%= student[0].firstname%>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+
+        <!-- //////////////////////// -->
+        <!-- Sem _ name -->
+
+        <!-- <div class="grid-wrapper">
+                    
+                  <% for (var i=0; i <data.length; i++) { %>
+                    <div class="single-chart">
+                      <svg viewBox="0 0 36 36" class="circular-chart orange">
+                        <path class="circle-bg"
+                          d="M18 2.0845
+                            a 15.9155 15.9155 0 0 1 0 31.831
+                            a 15.9155 15.9155 0 0 1 0 -31.831"
+                        />
+                        <path class="circle"
+                          stroke-dasharray="<%= data[i].P_days %>, 100"
+                          d="M18 2.0845
+                            a 15.9155 15.9155 0 0 1 0 31.831
+                            a 15.9155 15.9155 0 0 1 0 -31.831"
+                        />
+                        <text x="18" y="20.35" class="percentage"><%= data[i].P_days %></text>
+                      </svg>
+                    </div>
+                    <h2 class="grid-item names"><%= Courses[i].Course_Name %></h2>
+                    <% } %> -->
+
+        <div class="grid-wrapper">
+
+          
+          <div class="single-chart">
+            <svg viewBox="0 0 36 36" class="circular-chart orange">
+              <path class="circle-bg" d="M18 2.0845
+                            a 15.9155 15.9155 0 0 1 0 31.831
+                            a 15.9155 15.9155 0 0 1 0 -31.831" />
+              <path class="circle" stroke-dasharray="<%= data[0].P_days %>, 100" d="M18 2.0845
+                            a 15.9155 15.9155 0 0 1 0 31.831
+                            a 15.9155 15.9155 0 0 1 0 -31.831" />
+              <text x="18" y="20.35" class="percentage">
+                <%= data[0].P_days %>
+              </text>
+            </svg>
+          </div>
+          
+
+          <div class="single-chart">
+            <svg viewBox="0 0 36 36" class="circular-chart green">
+              <path class="circle-bg" d="M18 2.0845
+                              a 15.9155 15.9155 0 0 1 0 31.831
+                              a 15.9155 15.9155 0 0 1 0 -31.831" />
+              <path class="circle" stroke-dasharray="45, 100" d="M18 2.0845
+                              a 15.9155 15.9155 0 0 1 0 31.831
+                              a 15.9155 15.9155 0 0 1 0 -31.831" />
+              <text x="18" y="20.35" class="percentage">
+                <%= data[1].P_days %>
+              </text>
+            </svg>
+          </div>
+
+          <div class="single-chart">
+            <svg viewBox="0 0 36 36" class="circular-chart blue">
+              <path class="circle-bg" d="M18 2.0845
+                              a 15.9155 15.9155 0 0 1 0 31.831
+                              a 15.9155 15.9155 0 0 1 0 -31.831" />
+              <path class="circle" stroke-dasharray="96, 100" d="M18 2.0845
+                              a 15.9155 15.9155 0 0 1 0 31.831
+                              a 15.9155 15.9155 0 0 1 0 -31.831" />
+              <text x="18" y="20.35" class="percentage">
+                <%= data[2].P_days %>
+              </text>
+            </svg>
+          </div>
+
+          <h2 class="grid-item names">
+            <%= Courses[0].Course_Name %>
+          </h2>
+          <h2 class="grid-item names">
+            <%= Courses[1].Course_Name %>
+          </h2>
+          <h2 class="grid-item names">
+            <%= Courses[2].Course_Name %>
+          </h2>
+
+        </div>
+
+        <div class="grid-wrapper2">
+
+
+          <div class="single-chart">
+            <svg viewBox="0 0 36 36" class="circular-chart green">
+              <path class="circle-bg" d="M18 2.0845
+                                a 15.9155 15.9155 0 0 1 0 31.831
+                                a 15.9155 15.9155 0 0 1 0 -31.831" />
+              <path class="circle" stroke-dasharray="15, 100" d="M18 2.0845
+                                a 15.9155 15.9155 0 0 1 0 31.831
+                                a 15.9155 15.9155 0 0 1 0 -31.831" />
+              <text x="18" y="20.35" class="percentage">
+                <%= data[3].P_days %>
+              </text>
+            </svg>
+          </div>
+
+          <div class="single-chart">
+            <svg viewBox="0 0 36 36" class="circular-chart blue">
+              <path class="circle-bg" d="M18 2.0845
+                                a 15.9155 15.9155 0 0 1 0 31.831
+                                a 15.9155 15.9155 0 0 1 0 -31.831" />
+              <path class="circle" stroke-dasharray="100, 100" d="M18 2.0845
+                                a 15.9155 15.9155 0 0 1 0 31.831
+                                a 15.9155 15.9155 0 0 1 0 -31.831" />
+              <text x="18" y="20.35" class="percentage">
+                <%= data[4].P_days %>
+              </text>
+            </svg>
+          </div>
+
+          <h2 class="grid-item names">
+            <%= Courses[3].Course_Name %>
+          </h2>
+          <h2 class="grid-item names">
+            <%= Courses[4].Course_Name %>
+          </h2>
+
+
+        </div>
+
+        <!-- ////////////////////////// -->
+
+        <!-- content     -->
+      </div>
+
+
+      <!-- downflex -->
+    </div>
+
+    <!-- wrapper -->
+  </div>
+
+</body>
+
+</html>
+</body>
+
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/admin-common-page.css">
+    <link rel="stylesheet" href="css/admin-branch.css">
+    <link rel="stylesheet" href="css/admin-addbranch.css">
+    <script src="https://kit.fontawesome.com/300fc8e5c2.js" crossorigin="anonymous"></script>
+
+    <script>
+
+        function validateForm() {
+            var x = document.forms["nam"]["name"].value;
+           
+
+            if ( x == "") {
+            document.querySelector(".errtxt").textContent="Please Enter Branch Name";
+            document.querySelector(".errtxt").style.display="flex";
+            return false;
+            }
+            
+        }
+  
+    </script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="upperbar">
+            <div class="weblogoplace">
+                <img src="img/logo.png" alt="not rendered" id="weblogoimg">
+            </div>
+            <div class="webnameplace">
+                <div class="webname">
+                    <p id="temp1">Student Information System</p>
+                </div>
+            </div>
+        </div>
+        <div class="downflex">
+            <div class="sidenav">
+                <div class="sidenavopt">
+                    <ul>
+                        <li><a href='/adminhome' class="bcolor"><i class="fa-solid fa-house"></i> Home </a></li>
+                        <li id="for-down"><a href="#"><i class="fa fa-list-alt" aria-hidden="true"></i>
+                                <select name="" id="test" onmousedown="forfocus()" onblur="forblur()" class="dropmenu"
+                                    onchange="window.location.href=this.value;">
+                                    <option value="none" selected disabled hidden class="dropitems">New Registration
+                                    </option>
+                                    <option
+                                        value="/admin-student-registration"
+                                        class="dropitmes">Student Registration</option>
+                                </select>
+                            </a></li>
+
+                        <li><a href="/viewcourse"><i class="fa-solid fa-clipboard"></i>&nbsp;Course Management </a>
+                        </li>
+                        <li><a href="/viewdegree"><i class="fa fa-graduation-cap" aria-hidden="true"></i>&nbsp;Degree
+                                Management </a></li>
+                        <li><a href="/viewbranch"><i class="fa-solid fa-clipboard"></i>&nbsp;Branch Management </a>
+                        </li>
+                        <li><a href="/viewprogram"><i class="fa-solid fa-clipboard"></i>&nbsp;Programme Management
+                            </a></li>
+                        <li><a href="/addsemester"><i class="fa-solid fa-clipboard"></i>&nbsp;Semester </a></li>
+
+                        <li><a href="/admin-announcement"><i class="fa fa-bullhorn" aria-hidden="true"></i>&nbsp;Announcement </a></li>
+
+                        <li><a href="/changepwdadmin"><i class="fa-solid fa-key"></i> Change Password
+                            </a></li>
+                        <li><a href="/adminlogin"><i class="fa-solid fa-right-to-bracket"></i> Logout </a></li>
+                    </ul>
+                </div>
+                <div class="sidenavdown">
+                    <div class="curruserlogo">
+
+                    </div>
+                    <div class="currusername">
+                        <%= user[0].admin_name %> 
+                    </div>
+                </div>
+            </div>
+
+            <div class="content">
+
+                <div class="addcourse-wrapper">
+                    <div class="maintag-place">
+                        <h1>Add Branch</h1>
+                    </div>
+                    <form action="/addbranch" method="post" onsubmit="return validateForm()" name="nam">
+                        <div class="temp-wrapper">
+                            <div class="tag-place">
+                                <p class="tag-text"><b>Branch Name :-</b></p>
+                            </div>
+                            <div class="inputbox-place">
+                                <input type="text" name="name" class="ip-box" id="ip-name">
+                                <hr>
+                            </div>
+                        </div>
+                        <div class="errplc">
+                            <p class="errtxt">Please Enter Email Address</p>
+                        </div>
+
+                        <div class="btn-place">
+                            <!-- <a href="/viewbranch"> -->
+                            <button type="submit" class="btn">ADD</button>
+                            <!-- </a> -->
+                        </div>
+                    </form>
+
+
+                </div>
+
+                <!-- content     -->
+            </div>
+
+
+            <!-- downflex -->
+        </div>
+
+        <!-- wrapper -->
+    </div>
+    <script src="js/admin-branch.js"></script>
+</body>
+
+</html>
+</body>
+
+</html>

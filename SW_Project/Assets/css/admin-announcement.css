@@ -1,0 +1,262 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: open sans;
+}
+
+.wrapper{
+    height: 100vh;
+    width: 100vw;
+    background-image: url(https://img.freepik.com/free-photo/blue-abstract-gradient-wave-wallpaper_53876-108364.jpg?size=626&ext=jpg&ga=GA1.1.1929311289.1694337303&semt=ais);
+    background-size: cover;
+}
+
+.upperbar{
+    
+    display: flex;
+    height: 8.5vh;
+}
+
+.weblogoplace{
+    
+    width: 20vw;
+    height: 8.5vh;
+    background-color: rgba(195, 206, 226,0.4);
+}
+.webnameplace{
+    
+    width: 80vw;
+    height: 8.5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(195, 206, 226,0.4);
+}
+
+.sidenav
+{
+    width: 20vw;
+    height: 91.5vh;
+    background-color: rgba(195, 206, 226,0.4);
+    
+}
+.sidenavopt{
+    width: 20vw;
+    height: 83vh;
+    border: 0.1px solid white;
+    overflow-y: auto;
+}
+.sidenavdown{
+    width: 20vw;
+    height: 8.5vh;
+    
+}
+
+
+.downflex{
+    display: flex;
+}
+
+#weblogoimg
+{
+    height: 100%;
+    width: 100%;
+}
+
+.webname{
+    font-size: 5vh;
+}
+
+.sidenavopt li{
+    
+    height: 6vh;
+    
+    margin-bottom: 1vh;
+}
+
+.sidenavopt ul{
+    margin-top: 4vh;
+}
+.sidenavopt ul li a{
+    
+    font-size: 2.5vh;
+    color: black;
+    text-decoration: none;
+    margin-left: 0.7vw;
+    margin-bottom: 12vh;
+}
+
+.sidenavdown{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.curruserlogo{
+    
+    height: 80%;
+    width: 15%;
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWZWFVq0QIidGN0ioQJHhNBoEr1DvlH_yR05nH2_uz3tku7PvXWnDGshe5PHLqxQ91oMQ&usqp=CAU");
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-radius: 7vh;
+}
+
+.currusername
+{
+    font-size: 3vh;
+    margin-left: -2vw;
+}
+
+.content{
+    
+    width: 80vw;
+    height: 91.5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+select{
+    /* border: 2px solid red; */
+    height: 4vh;
+    width: 13vw;
+    font-size: 2.5vh;
+  
+    background: transparent;
+    border: none;
+    outline: none;
+}
+
+/* background-color: rgba(195, 206, 226,0.4); */
+option{
+    background-color: rgba(170, 206, 226, 0.4);
+    border: none;
+    outline: none;
+}
+
+
+
+
+
+
+
+
+
+
+.announcement-box
+{
+	height: 70vh;
+	width: 41vw;
+	box-shadow: 2px 2px 2px black;
+	border-radius: 13px;
+	margin: 15vh 20vw; 
+	backdrop-filter: blur(5px);
+}
+
+.announcement-title
+{
+	height: 10vh;
+}
+
+.closing-date
+{
+	margin-left: 3vh;
+	display: inline-flex;
+}
+
+.add
+{
+	height: 5vh;
+	width: 8vw;
+	margin-left: 60vh;
+	margin-top: 2vh;
+	font-size: 20px;
+}
+
+label{
+    display: block;
+}
+
+#title
+{
+	height: 4vh;
+	width: 15vw;
+	font-size: 20px;
+	border-radius: 1vh;
+	display: inline-block;
+	margin-left: 1vh;
+	background: transparent;
+	background-color: rgba(217, 224, 237, 0.4);
+	box-shadow: 1vh 1vh 1vh 0.4vh rgba(113, 141, 197, 0.4);
+}
+
+#last-date
+{
+	margin-left: 1vh;
+    border-radius: 8px;
+}
+#detail
+{
+	font-size: 20px;
+	margin-bottom: 2vh;
+	border-radius: 2vh;
+	background: transparent;
+	background-color: rgba(217, 224, 237, 0.4);
+	box-shadow: 1vh 1vh 1vh 0.4vh rgba(113, 141, 197, 0.4);
+}
+
+.announcement-title
+{
+	height: 5vh;
+	
+	display: inline-flex;
+	margin-top: 1vh;
+	margin-left: 3vh;
+	
+}
+
+.announcement-detail
+{
+	margin-top: 2vh;
+	margin-left: 3vh;
+	margin-right: 3vh;
+}
+
+.add-button
+{
+	width: 37.5vw;
+	margin-left: 3vh;
+    margin-top: 4vh;
+}
+
+.add-button button
+{
+	margin: 3vh 17vw ;
+	height: 5vh;
+	width: 4vw;
+    font-size: 2.5vh;
+}
+
+button
+{
+	border-radius: 5px;
+	background-color: rgb(2, 26, 51);
+	color: white;
+    border-radius: 7px;
+}
+
+button:hover{
+    transform: scale(1.07);
+	transition: 0.1s;
+}
+
+.announcement-box:hover
+{
+	transform: scale(1.02);
+	transition: 0.2s;
+}

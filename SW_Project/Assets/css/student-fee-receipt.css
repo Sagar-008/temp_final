@@ -1,0 +1,225 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: open sans;
+}
+
+.wrapper{
+    height: 100vh;
+    width: 100vw;
+    background-image: url(https://img.freepik.com/free-photo/blue-abstract-gradient-wave-wallpaper_53876-108364.jpg?size=626&ext=jpg&ga=GA1.1.1929311289.1694337303&semt=ais);
+    background-size: cover;
+}
+
+.upperbar{
+    
+    display: flex;
+    height: 8.5vh;
+}
+
+.weblogoplace{
+    
+    width: 20vw;
+    height: 8.5vh;
+    background-color: rgba(195, 206, 226,0.4);
+}
+.webnameplace{
+    
+    width: 80vw;
+    height: 8.5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(195, 206, 226,0.4);
+}
+
+.sidenav
+{
+    width: 20vw;
+    height: 91.5vh;
+    background-color: rgba(195, 206, 226,0.4);
+    
+}
+.sidenavopt{
+    width: 20vw;
+    height: 83vh;
+    border: 0.1px solid white;
+}
+.sidenavdown{
+    width: 20vw;
+    height: 8.5vh;
+    
+}
+
+
+.downflex{
+    display: flex;
+}
+
+#weblogoimg
+{
+    height: 100%;
+    width: 100%;
+}
+
+.webname{
+    font-size: 5vh;
+}
+
+.sidenavopt li{
+    
+    height: 6vh;
+    
+    margin-bottom: 1vh;
+}
+
+.sidenavopt ul{
+    margin-top: 4vh;
+}
+.sidenavopt ul li a{
+    
+    font-size: 2.5vh;
+    color: black;
+    text-decoration: none;
+    margin-left: 0.7vw;
+    margin-bottom: 12vh;
+}
+
+.sidenavdown{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.curruserlogo{
+    
+    height: 80%;
+    width: 15%;
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWZWFVq0QIidGN0ioQJHhNBoEr1DvlH_yR05nH2_uz3tku7PvXWnDGshe5PHLqxQ91oMQ&usqp=CAU");
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-radius: 7vh;
+}
+
+.currusername
+{
+    font-size: 3vh;
+    margin-left: -2vw;
+    
+    
+}
+
+.content{
+    
+    width: 80vw;
+    height: 91.5vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* common page ends here */
+
+.fee-receipt-wrapper{
+    
+    height: 80%;
+    width: 90%;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+}
+
+.fee-tag-place{
+    height: 7vh;
+    
+}
+
+.fee-tag{
+    font-size: 4vh;
+    font-weight: 800;
+}
+.tag-place{
+    
+    height: 8%;
+    width: 100%;
+    display: flex;
+}
+
+.receipt-no-place{
+    height: 100%;
+    width: 50%;
+    display: flex;
+}
+
+.up-tag{
+    font-size: 2.5vh;
+    font-weight: 800;
+}
+
+.date-place{
+    
+    height: 100%;
+    width: 50%;
+    display: flex;
+}
+
+.table-for-fees{
+    
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 3.7vh 3.7vh 3.7vh 3.7vh 3.7vh 5vh 3.7vh 3.7vh 3.7vh 3.7vh 3.7vh 5vh 3.7vh 3.7vh 3.7vh 3.7vh 3.7vh;
+}
+
+.left-part{
+    border: 2px solid black;
+    font-weight: 800;
+    font-size: 2vh;
+}
+
+.right-part{
+    border: 2px solid black;
+    font-size: 2vh;
+}
+
+.sep-tag{
+    border: 2px solid black;
+    font-size: 2vh;
+    font-weight: 800;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.printbtnplace{
+    height: 6%;
+    width: 100%;
+    
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.btn{
+    color: white;
+    background-color: rgb(2, 26, 51, 0.85);
+    height: 4vh;
+    width: 5vw;
+    border-radius: 10px;
+    font-size: 2.5vh;
+  
+  }
+  
+  .btn:hover{
+      transition: 0.2s;
+      transform: scale(1.1);
+  }
+
+  .left-part,.right-part{
+    display: flex;
+    align-items: center;
+    padding-left: 0.2vw;
+  }

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/faculty-change-password.css">
+    <script src="https://kit.fontawesome.com/300fc8e5c2.js" crossorigin="anonymous"></script>
+
+    <script>
+
+function validateForm() {
+            var x = document.forms["nam"]["oldpwd"].value;
+            var y = document.forms["nam"]["newpwd"].value;
+            var z = document.forms["nam"]["confirmpwd"].value;
+
+            if ( x == "") {
+            document.querySelector(".errtxt").textContent="Please Enter Old Password";
+            document.querySelector(".errtxt").style.display="flex";
+            return false;
+            }
+            if(y == "")
+            {
+                document.querySelector(".errtxt").textContent="Please Enter New Password";
+                document.querySelector(".errtxt").style.display="flex";
+                return false;
+            }
+            if(z == "")
+            {
+                document.querySelector(".errtxt").textContent="Please Enter  Confirm Password";
+                document.querySelector(".errtxt").style.display="flex";
+                return false;
+            }
+        }
+  
+    </script>
+</head>
+<body>
+    <div class="wrapper">
+    <div class="upperbar">
+        <div class="weblogoplace">
+            <img src="img/logo.png" alt="not rendered" id="weblogoimg">
+        </div>
+        <div class="webnameplace">
+            <div class="webname"><p id="temp1">Student Information System</p></div>
+        </div>        
+    </div>
+    <div class="downflex">
+    <div class="sidenav">
+        <div class="sidenavopt">
+            <ul>
+                <li><a href="/facultyhome" class="bcolor"><i class="fa-solid fa-house"></i> Home </a></li>
+                <li><a href="/viewfaculty" class="bcolor"><i class="fa-solid fa-user"></i> Faculty Details
+                    </a></li>
+                <li><a href="/coursegrade" class="bcolor"><i class="fa-solid fa-file"></i> Course Grade</a></li>
+                <li><a href="/courseattendence"><i class="fa-solid fa-clipboard"></i> Course Attendence </a></li>
+                <li><a href="/changepwdfaculty"><i class="fa-solid fa-key"></i> Change Password </a></li>
+                <li><a href="/logoutfaculty"><i class="fa-solid fa-right-to-bracket"></i> Logout </a></li>
+            </ul>
+        </div>
+        <div class="sidenavdown">
+            <div class="curruserlogo">
+
+            </div>
+            <div class="currusername">
+                <%= user[0].fullname %>
+            </div>
+        </div>
+    </div>
+
+    <div class="content">
+       
+        <div class="changepassword-wrapper">
+        
+            <div class="changepasswordtagplace">
+                <center>Change Password</center>
+            </div>
+    <form action="changepwdfaculty" method="post" onsubmit="return validateForm()" name="nam" >
+            <br>
+            <p class="subtags">Old Password</p>
+            <div class="containerforinput">
+                <div class="sidelogoofpass">
+                    <img src="img/unlock.png" alt="not available">
+                </div>
+                <div class="inputbox">
+                    <input type="password" name="oldpwd" placeholder="Enter Old Password">
+                    <hr class="horizontalline">
+                </div>
+            </div>
+
+            <p class="subtags">New Password</p>
+            <div class="containerforinput">
+                <div class="sidelogoofpass">
+                    <img src="img/lock.png" alt="">
+                </div>
+                <div class="inputbox">
+                    <input type="password" name="newpwd" placeholder="Enter New Password">
+                    <hr class="horizontalline">
+                </div>
+            </div>
+
+            <p class="subtags">Confirm New Password</p>
+            <div class="containerforinput">
+                <div class="sidelogoofpass">
+                    <img src="img/lock.png" alt="">
+                </div>
+                <div class="inputbox">
+                    <input type="password" name="confirmpwd" placeholder="Confirm New Password">
+                    <hr class="horizontalline">
+                </div>
+
+            </div>
+            <div class="errplc">
+                <p class="errtxt">Please Enter Email Address</p>
+            </div>
+
+            <div class="placeforbutton">
+                <!-- <a href="/adminhome"> -->
+                <button type="submit" class="btn">Submit</button>
+            <!-- </a> -->
+        </form>
+
+            </div>
+
+        </div>
+
+    
+    <!-- downflex -->
+    </div>
+
+    <!-- wrapper -->
+    </div>
+
+</body>
+</html>

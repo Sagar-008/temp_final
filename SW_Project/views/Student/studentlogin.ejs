@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/login-student.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/login-student.css">
+    <title>Student Login</title>
+
+    <script>
+
+        function validateForm() {
+            var x = document.forms["nam"]["s_email"].value;
+            var y = document.forms["nam"]["s_password"].value;
+
+            if ( x == "") {
+            document.querySelector(".errtxt").textContent="Please Enter Email Address";
+            document.querySelector(".errtxt").style.display="flex";
+            return false;
+            }
+            if(y == "")
+            {
+                document.querySelector(".errtxt").textContent="Please Enter Password";
+                document.querySelector(".errtxt").style.display="flex";
+                return false;
+            }
+        }
+  
+    </script>
+
+</head>
+
+<body>
+<div class="wrapper">
+<div class="container">
+    <div class="side">
+        <img src="https://img.freepik.com/premium-vector/cloud-computing-flat-illustration-trendy-vector_203633-1933.jpg?w=996" alt="img" class="sideimg">
+    </div>
+    
+    <div class="formbox">
+    <form action="/studentlogin" class="form" method="post" onsubmit="return validateForm()" name="nam">
+        <h2>Student
+        </h2> 
+        <div class="logoandinput">
+        <img class="sidelogo" src="https://img.freepik.com/premium-vector/email-symbol-white-background-drawing-by-illustration_872756-174.jpg?w=740" alt="" id="maillogo">
+        <input type="email" name="s_email" class="box" placeholder="Enter E-mail">
+        </div>
+        <hr>
+        <div class="logoandinput">
+            <img id="passlogo" class="sidelogo" src="https://img.freepik.com/premium-vector/privacy-settings-icon-settings-icon-with-padlock-sign-settings-icon-security-protection-privacy-symbol-vector-icon_775815-996.jpg?w=740" alt="">
+            <input type="password" name="s_password" class="box" placeholder="Enter password">
+            </div>
+        <hr>
+        <div class="errplc">
+            <p class="errtxt">Please Enter Email Address</p>
+        </div>
+        <input type="submit" value="Login" class="submit">
+        <a href="/forgotpwdstudent" > Forgot Passward?</a>
+    </form>
+    </div>
+    
+</div>
+</div>
+</body>
+</html>

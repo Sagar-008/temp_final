@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/student-common-page.css">
+    <link rel="stylesheet" href="css/student-profile.css">
+    <label for="css/student-profile.css"></label>
+    <script src="https://kit.fontawesome.com/300fc8e5c2.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="upperbar">
+            <div class="weblogoplace"><!DOCTYPE html>
+              <html lang="en">
+              <head>
+                  <meta charset="UTF-8">
+                  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                  <title>Document</title>
+                  <link rel="stylesheet" href="css/student-common-page.css">
+                  <link rel="stylesheet" href="css/student-profile.css">
+                  <label for="css/student-profile.css"></label>
+                  <script src="https://kit.fontawesome.com/300fc8e5c2.js" crossorigin="anonymous"></script>
+                  <script src="js/student-profile.js"></script>
+              </head>
+              <body>
+              
+                  <div class="wrapper">
+                      <div class="upperbar">
+                          <div class="weblogoplace">
+                              <img src="img/logo.png" alt="not rendered" id="weblogoimg">
+                          </div>
+                          <div class="webnameplace">
+                              <div class="webname"><p id="temp1">Student Information System</p></div>
+                          </div>        
+                      </div>
+                      <div class="downflex">
+                      <div class="sidenav" action="/studenthome" , method="post">
+                          <div class="sidenavopt">
+                              <ul>
+                                <li><a href="/studenthome" class="bcolor"><i class="fa-solid fa-house"></i> Home </a></li>
+                                <li><a href="/viewstudent" class="bcolor"><i class="fa-solid fa-user"></i> Student Details </a></li>
+                                  <li><a href="/viewgrade" class="bcolor"><i class="fa-solid fa-file"></i>&nbsp;Grade Reports</a></li>
+                                  <li><a href="/viewattendence"><i class="fa-solid fa-clipboard"></i>&nbsp;Attendence </a></li>
+                                  <li><a href="/courseregistration"><i class="fa fa-list-alt" aria-hidden="true"></i>&nbsp;Course Registration </a></li>
+                                  <li><a href="/student-announcement"><i class="fa fa-bullhorn" aria-hidden="true"></i>&nbsp;Announcement </a></li>
+                                  <li><a href="/changepwdstudent"><i class="fa-solid fa-key"></i> Change Password </a></li>
+                                  <li><a  href="/logoutstudent"><i class="fa-solid fa-right-to-bracket"></i> Logout </a></li>
+                                </ul>
+                          </div>
+                          <div class="sidenavdown">
+                              <div class="curruserlogo">
+                  
+                              </div>
+                              <div class="currusername">
+                                  <%= student[0].firstname%>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="content">
+              
+                          <div class="temp-wrapper">
+              
+                          <div class="left-box">
+                       
+              
+                              <div class="student-photo">
+                  
+                                <img src="https://img.freepik.com/free-photo/3d-car-with-vibrant-colors_23-2150797034.jpg?t=st=1698597442~exp=1698601042~hmac=718aad19edb19be7663a79a45eb553ea7060638378fe752932283e45a2570f11&w=740" alt="student img" class="studentimg">
+                  
+                              </div>
+                  
+                              <div class="student-name">
+                                <%= student[0].firstname%> <%= student[0].lastname%>
+                              </div>
+                  
+                          </div>
+                  
+                  
+                          <div class="for-include-edit-btn">
+                          <div class="right-box">
+                            
+                            <div class="table-responsive table-hover">
+                              <table class="table" >
+                              <thead class=" text-primary">
+                              </thead>
+                              <tbody>
+                  
+                              <tr>
+                                  <td style="width: 25%;">First Name</td>
+                                  <td style="width: 2%;">:</td>
+                                  <td style="width: 68%;"> 
+                                    <input readonly type="text" class="ip-boxes-editable" value="<%= student[0].firstname%>" id="first-name">
+                                  </td>
+                              </tr>
+                  
+                              <tr>
+                                <td>Middle Name</td>
+                                <td>:</td>
+                                <td>
+                                  <input readonly type="text" class="ip-boxes-editable" value="<%= student[0].middlename%>" id="middle-name">
+                                 </td>
+                            </tr>
+                  
+                            <tr>
+                                <td>Last Name</td>
+                                <td>:</td>
+                                <td>
+                                  <input readonly type="text" class="ip-boxes-editable" value="<%= student[0].lastname%>" id="last-name">
+                                </td>
+                            </tr>
+                  
+                            <tr>
+                                  <td>Student ID</td>
+                                  <td>:</td>
+                                  <td>
+                                    <input readonly type="text" class="ip-boxes-editable" value="<%= student[0].stud_id%>" id="student-id">
+                                  </td> 
+                            </tr>
+                              
+                            <tr>
+                              <td>Mobile Number</td>
+                              <td>:</td>
+                              <td>
+                                <input readonly type="text" class="ip-boxes-editable" value="<%= student[0].phoneNo%>" id="mobile-no">
+                              </td>
+                          </tr>
+                  
+                  
+                          <tr>
+                            <td>Gender</td>
+                            <td>:</td>
+                            <td>
+                              <input readonly type="text" class="ip-boxes-editable" value="<%= student[0].Gender%>" id="gender">
+                            </td>
+                          </tr>
+                  
+                          <tr>
+                            <td>Date Of Birth</td>
+                            <td>:</td>
+                            <td>
+                              <% var options={ weekday: 'long' , year: 'numeric' , month: 'long' , day: 'numeric' }; %>  
+                              <% if (student[0].DOB) { %>
+                                <input type="text" readonly class="ip-boxes-editable" name="dob" value="<%= student[0].DOB.toLocaleDateString("en-US", options) %>" id="dob">
+                            <% } else { %>
+                                <input type="text" readonly class="ip-boxes-editable" name="dob" placeholder="Month Date, Year" id="dob">
+                            <% } %>
+                            </td>
+                        </tr>
+                        
+                  
+                          <tr>
+                              <td>Email Address</td>
+                              <td>:</td>
+                              <td>
+                                <input readonly type="email" class="ip-boxes-editable" value="<%= student[0].Email_id%>" id="emailaddr">  
+                              </td>
+                            </tr>
+                              
+                            <tr>
+                              <td>Permanent Address</td>
+                              <td>:</td>
+                              <td>
+                                
+                                <input readonly type="text" class="ip-boxes-editable" value="<%= student[0].Address%>" id="homeaddr">
+                              </td>
+                          </tr>  
+                              
+                              
+                          <tr>
+                            <td>Persnol Email Address</td>
+                            <td>:</td>
+                            <td>
+                              <input readonly type="email" class="ip-boxes-editable" value="<%= student[0].Personal_Email_id%>" id="personalmailaddr">  
+                            </td>
+                          </tr>
+                  
+                          
+                  
+                          <tr>
+                            <td>Batch</td>
+                            <td>:</td>
+                            <td>
+                              <input readonly type="text" class="ip-boxes-editable" value="<%= student[0].Batch%>" id="batch">
+                            </td>
+                          </tr>
+                  
+                  
+                          <tr>
+                            <td>Blood-group</td>
+                            <td>:</td>
+                            <td>
+                              <input readonly type="text" class="ip-boxes-editable" value="<%= student[0].Blood_Group%>" id="bloodgroup">
+                            </td>
+                          </tr>
+                  
+                          
+                           <tr>
+                            <td>ProgramRegistered</td>
+                            <td>:</td>
+                            <td>
+                              <input readonly type="text" class="ip-boxes-editable" value="<%= program.DegreeOffered.Degree_name + ' (' + program.BranchOffered.Branch_name + ')' %>" id="programme">
+                            </td>
+                          </tr>
+                  
+                         
+                            
+                             
+                              </tbody>
+                          </table>
+                          </div>
+                  
+                          </div>
+              
+                          <div class="buttonplace">
+                           <button class="edit-btn submit" type="submit" onclick="window.location.href='/updatestudent'">Edit</button>
+                          </div>
+                          
+                          <!-- for-include-bottom button-->
+                          </div>
+              
+                          </div>
+                          
+                         
+                          
+                   <!-- content     -->
+                  </div>
+              
+                  
+                  <!-- downflex -->
+                  </div>
+              
+                  <!-- wrapper -->
+                  </div>
+              
+                  
+                
+              </body>
+              </html>
+              </body>
+              </html>

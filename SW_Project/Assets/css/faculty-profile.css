@@ -1,0 +1,374 @@
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: open sans;
+}
+
+.wrapper{
+    height: 100vh;
+    width: 100vw;
+    background-image: url(https://img.freepik.com/free-photo/blue-abstract-gradient-wave-wallpaper_53876-108364.jpg?size=626&ext=jpg&ga=GA1.1.1929311289.1694337303&semt=ais);
+    background-size: cover;
+}
+
+.upperbar{
+    
+    display: flex;
+    height: 8.5vh;
+}
+
+.weblogoplace{
+    
+    width: 20vw;
+    height: 8.5vh;
+    background-color: rgba(195, 206, 226,0.4);
+}
+.webnameplace{
+    
+    width: 80vw;
+    height: 8.5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(195, 206, 226,0.4);
+}
+
+.sidenav
+{
+    width: 20vw;
+    height: 91.5vh;
+    background-color: rgba(195, 206, 226,0.4);
+    
+}
+.sidenavopt{
+    width: 20vw;
+    height: 83vh;
+    border: 0.1px solid white;
+}
+.sidenavdown{
+    width: 20vw;
+    height: 8.5vh;
+    
+}
+
+.content{
+    
+    width: 80vw;
+    height: 91.5vh;
+    
+    
+}
+
+.downflex{
+    display: flex;
+}
+
+#weblogoimg
+{
+    height: 100%;
+    width: 100%;
+}
+
+.webname{
+   font-size: 5vh;
+}
+
+.sidenavopt li{
+    
+    height: 6vh;
+    
+    margin-bottom: 1vh;
+}
+
+.sidenavopt ul{
+    margin-top: 4vh;
+}
+.sidenavopt ul li a{
+    
+    font-size: 2.5vh;
+    color: black;
+    text-decoration: none;
+    margin-left: 0.7vw;
+    margin-bottom: 12vh;
+}
+
+.sidenavdown{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.curruserlogo{
+    
+    height: 80%;
+    width: 15%;
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWZWFVq0QIidGN0ioQJHhNBoEr1DvlH_yR05nH2_uz3tku7PvXWnDGshe5PHLqxQ91oMQ&usqp=CAU");
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-radius: 7vh;
+}
+
+.currusername
+{
+    font-size: 3vh;
+    margin-left: -2vw; 
+
+}
+
+/* commonpage ends hereh */
+
+
+
+
+.facultyinfo{
+    width:80vw;
+    height:82.35vh;
+    
+    display: flex;
+    justify-content: space-around;
+        
+
+ }
+
+ .facultyphoto{
+
+    height: 40vh;
+    width: 23%;
+    
+    border-radius: 2vh;
+	margin-left: 2vh;
+	margin-top: 6vh;
+	margin-bottom: 2.5vh;
+    /* background-color: rgba(198, 203, 212, 0.4); */
+    box-shadow: 2px 2px 2px black;
+    
+}
+
+.for-include-biography{
+    
+    width: 60%;
+    height: calc(100%-3vh);
+    margin-top: 3vh;
+    border-radius: 13px;
+    backdrop-filter: blur(50px);
+    box-shadow: 2px 2px 2px black;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+
+
+.facultyimg{
+    height: 30vh;
+    width: 15vw;
+    margin-left: 1vw;
+    margin-top: 5.5vh;
+  
+	margin-right: 5vh;
+    border-radius: 15vh;
+}
+
+
+.facultydetail{
+    display: inline-block;
+    height: 46%;
+    width: 100%;
+}
+
+.facultyname{
+	height: 4vh;
+    font-size: 3.5vh;
+    border-radius: 6px;
+    margin-top: 1.5vh;
+    margin-left: 4vh;
+    width: 90%;
+    background: transparent;
+    border-radius: 10px;
+    border: none;
+}
+
+
+
+ .degree{
+    height: 4vh;
+    width: 90%;
+    background: transparent;
+	margin-top: 2vh;
+    margin-left: 4vh;
+    font-size: 23px;
+    font-family: sans-serif;
+    border-radius: 10px;
+    border: none;
+}
+
+
+.mo-number{
+    height: 4vh;
+    margin-top: 4vh;
+    margin-bottom: 2vh;
+    margin-left: 0.6vw;
+    font-size: 20px;
+    background: transparent;
+    border-radius: 10px;
+    border: none;
+}
+
+.facultydetail i{
+    margin-left: 4vh;
+}
+
+.location{
+    height: 4vh;
+    width: 70%;
+    background: transparent;
+    margin-bottom: 2vh;
+    margin-left: 0.6vw;
+    margin-top: 2vh;
+    font-size: 20px;
+    border-radius: 10px;
+    border: none;
+}
+
+.email{
+    height: 4vh;
+    width: 40%;
+    background: transparent;
+    
+    margin-bottom: 2vh;
+    margin-left: 0.6vw;
+    margin-top: 2vh;
+    font-size: 20px;
+    border-radius: 10px;
+    border: none;
+} 
+
+.genderplace{
+    /* border: 2px solid red; */
+    height: 4vh;
+    width: 10%;
+    background: transparent;
+    margin-bottom: 2vh;
+    margin-left: 0.6vw;
+    margin-top: 2vh;
+    font-size: 20px;
+    border-radius: 10px;
+    border: none;
+}
+
+.dobplace{
+    /* border: 2px solid black; */
+    height: 4vh;
+    background: transparent;
+    margin-bottom: 5vh;
+    margin-left: 0.6vw;
+    margin-top: 2vh;
+    font-size: 20px;
+    border-radius: 10px;
+    border: none;
+}
+
+
+
+.biography{
+    width: 100%;
+    margin-top: 3%;
+    
+    padding: 0.8vh 2vh;
+    font-size: 20px;
+    font-family: sans-serif;
+    border-radius: 2vh;
+    position: sticky;
+    padding-left: 4vh;
+    border: none;
+
+}
+
+
+.facultyname:hover,.degree:hover,.mo-number:hover,.location:hover,.email:hover ,.dobplace:hover,.genderplace:hover{
+    transform: scale(1.007);
+	transition: 0.1s;
+}
+
+ .facultyphoto:hover
+{
+    transform: scale(1.05);
+	transition: 0.1s;
+}
+.biography:hover
+{
+    transform: scale(1.027);
+	transition: 0.2s;
+}
+
+/* .facultyphoto:hover{
+    transform: scale(1.007);
+	transition: 0.1s;
+} */
+
+.biography h1{
+    margin: 10px 0px;
+}
+
+button{
+    text-align: center;
+    cursor: pointer;
+    padding: 1vh 2vh;
+    border-radius: 8px;
+    font-size: 2vh;
+}
+
+.buttonplace{
+    
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2vh;
+    width: 60%;
+    
+}
+
+.for-center{
+    
+    width: 100%;
+    display: flex;
+    justify-content: space-around; 
+    align-items: center; 
+    
+}
+
+.buttonplace2:hover{
+    transform: scale(1.06);
+    transition: 0.2s;
+}
+
+button{
+    background-color: rgb(2, 26, 51, 0.85);
+    color: white;
+}
+
+.img-space{
+    
+    height: 3vh;
+    width: 23%;
+    margin-left: 2vh;
+}
+
+.paras{
+    
+    font-size: 2vh;
+    font-family: sans-serif;
+    width: 97%;
+    background: transparent;
+    padding-top: 1.5vh;
+    padding-left: 0.3vw;
+    padding-right: 0.3vw;
+    border-radius: 10px;
+    border: none;
+}

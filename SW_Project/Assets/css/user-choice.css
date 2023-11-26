@@ -1,0 +1,82 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.wrapper{
+    background-image: url(https://img.freepik.com/free-photo/blue-abstract-gradient-wave-wallpaper_53876-108364.jpg?size=626&ext=jpg&ga=GA1.1.1929311289.1694337303&semt=ais);
+    background-size: cover;
+    
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    
+    align-items: center;
+}
+
+.maintag{
+    
+    height: 10vh;
+    width: 20vw;
+    font-size: 10vh;
+    
+    margin-top: 7vh;
+    margin-bottom: 10vh;
+    
+}
+
+
+.cardwrapper{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+    width: 90vw;
+    height: 60vh;
+    
+
+}
+
+.card{
+    height: 50vh;
+    width: 20vw;
+    border: 2px solid black;
+    border-radius: 10px;
+    transform: scale(0.9);
+    box-shadow: 2px 2px 2px white,
+                2px 2px 2px white;
+}
+
+.picplace{
+    
+    height: 40vh;
+    width: 100%;
+    padding: 4vh;
+}
+
+.tagplace{
+    font-size: 6.5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+    width: 100%;
+}
+
+.pic{
+    height: 100%;
+    width: 100%;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.card:hover{
+    transform: scale(0.97);
+    transition: 0.2s;
+}

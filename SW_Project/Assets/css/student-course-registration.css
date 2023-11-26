@@ -1,0 +1,249 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: open sans;
+}
+
+.wrapper{
+    height: 100vh;
+    width: 100vw;
+    background-image: url(https://img.freepik.com/free-photo/blue-abstract-gradient-wave-wallpaper_53876-108364.jpg?size=626&ext=jpg&ga=GA1.1.1929311289.1694337303&semt=ais);
+    background-size: cover;
+}
+
+.upperbar{
+    
+    display: flex;
+    height: 8.5vh;
+}
+
+.weblogoplace{
+    
+    width: 20vw;
+    height: 8.5vh;
+    background-color: rgba(195, 206, 226,0.4);
+}
+.webnameplace{
+    
+    width: 80vw;
+    height: 8.5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(195, 206, 226,0.4);
+}
+
+.sidenav
+{
+    width: 20vw;
+    height: 91.5vh;
+    background-color: rgba(195, 206, 226,0.4);
+    
+}
+.sidenavopt{
+    width: 20vw;
+    height: 83vh;
+    border: 0.1px solid white;
+}
+.sidenavdown{
+    width: 20vw;
+    height: 8.5vh;
+    
+}
+
+
+.downflex{
+    display: flex;
+}
+
+#weblogoimg
+{
+    height: 100%;
+    width: 100%;
+}
+
+.webname{
+    font-size: 5vh;
+}
+
+.sidenavopt li{
+    
+    height: 6vh;
+    
+    margin-bottom: 1vh;
+}
+
+.sidenavopt ul{
+    margin-top: 4vh;
+}
+.sidenavopt ul li a{
+    
+    font-size: 2.5vh;
+    color: black;
+    text-decoration: none;
+    margin-left: 0.7vw;
+    margin-bottom: 12vh;
+}
+
+.sidenavdown{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.curruserlogo{
+    
+    height: 80%;
+    width: 15%;
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWZWFVq0QIidGN0ioQJHhNBoEr1DvlH_yR05nH2_uz3tku7PvXWnDGshe5PHLqxQ91oMQ&usqp=CAU");
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-radius: 7vh;
+}
+
+.currusername
+{
+    font-size: 3vh;
+    margin-left: -2vw;
+    
+    
+}
+
+.content{
+    
+    width: 80vw;
+    height: 91.5vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+
+/* common page ends here */
+
+
+
+table{
+    
+    width: 60vw;
+    border-collapse: separate;
+    border-spacing: 2.4vh 2vw;
+    max-height: 100%;
+    
+
+}
+
+
+
+thead{
+    height: 15%;
+    
+}
+
+
+td , th{
+    
+    border-radius: 10px;
+}
+
+th{
+    height: 8vh;
+    font-size: 2.6vh;
+    color: white;
+    background-color: rgb(2, 26, 51);
+    position: sticky;
+    top: 0;
+}
+
+td{
+    background-color: rgba(195, 206, 226,0.4);
+
+}
+
+.leftpad{
+    height: 8vh;
+    font-size: 2.4vh;
+    padding-left: 0.8vw;
+}
+
+
+
+
+.center{
+    
+    height: 40%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.center.bigg{
+    font-size: 2.5vh;
+}
+
+
+tr:hover{
+    transform: scale(1.01);
+	transition: 0.1s;
+}
+
+select{
+    
+    font-size: 2.2vh;
+    background-color: rgb(2, 26, 51, 0.85);
+    color: white;
+    border-radius: 8px;
+}
+
+.table-wrapper{
+   max-height: 70vh;
+    overflow-y: auto;
+}
+
+tbody{
+    height: 85%;
+    
+}
+
+thead{
+    position: sticky;
+    z-index: 2;
+}
+
+.btn-place{
+    
+    height: 6vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 4vh;
+}
+
+.btn{
+    color: white;
+    background-color: rgb(2, 26, 51);
+    height: 6vh;
+    width: 7vw;
+    border-radius: 10px;
+    font-size: 2.5vh;
+  
+  }
+  
+  .btn:hover{
+      transition: 0.2s;
+      transform: scale(1.1);
+  }
+
+  .ip-boxe{
+    transform: scale(2);
+    z-index: -1;
+    accent-color: rgb(2,26,51);
+  }
+
+

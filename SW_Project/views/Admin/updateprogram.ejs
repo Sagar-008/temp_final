@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/admin-common-page.css">
+    <link rel="stylesheet" href="css/admin-program.css">
+    <link rel="stylesheet" href="css/editprogram.css">
+    <script src="https://kit.fontawesome.com/300fc8e5c2.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="upperbar">
+            <div class="weblogoplace">
+                <img src="img/logo.png" alt="not rendered" id="weblogoimg">
+            </div>
+            <div class="webnameplace">
+                <div class="webname"><p id="temp1">Student Information System</p></div>
+            </div>        
+        </div>
+        <div class="downflex">
+        <div class="sidenav">
+            <div class="sidenavopt">
+                <ul>
+                    <li><a href='/adminhome' class="bcolor"><i class="fa-solid fa-house"></i> Home </a></li>
+                    <li id="for-down"><a href="#"><i class="fa fa-list-alt" aria-hidden="true"></i>
+                            <select name="" id="test" onmousedown="forfocus()" onblur="forblur()" class="dropmenu"
+                                onchange="window.location.href=this.value;">
+                                <option value="none" selected disabled hidden class="dropitems">New Registration
+                                </option>
+                                <option
+                                    value="/admin-student-registration"
+                                    class="dropitmes">Student Registration</option>
+                            </select>
+                        </a></li>
+
+                    <li><a href="/viewcourse"><i class="fa-solid fa-clipboard"></i>&nbsp;Course Management </a>
+                    </li>
+                    <li><a href="/viewdegree"><i class="fa fa-graduation-cap" aria-hidden="true"></i>&nbsp;Degree
+                            Management </a></li>
+                    <li><a href="/viewbranch"><i class="fa-solid fa-clipboard"></i>&nbsp;branch Management </a>
+                    </li>
+                    <li><a href="/viewprogram"><i class="fa-solid fa-clipboard"></i>&nbsp;Programme Management
+                        </a></li>
+                    <li><a href="/addsemester"><i class="fa-solid fa-clipboard"></i>&nbsp;Semester </a></li>
+
+                    <li><a href="/admin-announcement"><i class="fa fa-bullhorn" aria-hidden="true"></i>&nbsp;Announcement </a></li>
+
+                    <li><a href="#"><i class="fa fa-credit-card-alt" aria-hidden="true"></i>&nbsp;Fees </a></li>
+                    <li><a href="/changepwdadmin"><i class="fa-solid fa-key"></i> Change Password
+                        </a></li>
+                    <li><a href="/adminlogin"><i class="fa-solid fa-right-to-bracket"></i> Logout </a></li>
+                </ul>
+            </div>
+            <div class="sidenavdown">
+                <div class="curruserlogo">
+                    
+                </div>
+                <div class="currusername">
+                    nothing
+                </div>
+            </div>
+        </div>
+        
+        <div class="content">
+       
+        <div class="editprogram-wrapper">
+            <div class="maintag-place">
+                <h1>Edit Programme</h1>
+            </div>
+            <div class="temp-wrapper">
+            <div class="tag-place">
+                <p class="tag-text"><b>Degree Name :-</b></p>
+            </div>
+            <div class="inputbox-place">
+                
+                <select name="" class="dropmenufortable" onchange="window.location.href=this.value;">
+                    <option value="none" selected disabled hidden class="dropitems">Select Degree</option>
+                    <option value="https://www.nationalgeographic.com/environment/article/deserts#:~:text=What%20is%20a%20desert%3F,class%20of%20regions%20called%20drylands." class="dropitmes">Course-1</option>
+                    <option value="https://www.nationalgeographic.com/environment/article/deserts#:~:text=What%20is%20a%20desert%3F,class%20of%20regions%20called%20drylands." class="dropitmes">Course-2</option>
+                    <option value="https://www.nationalgeographic.com/environment/article/deserts#:~:text=What%20is%20a%20desert%3F,class%20of%20regions%20called%20drylands." class="dropitmes">Course-3</option>
+                    <option value="https://www.nationalgeographic.com/environment/article/deserts#:~:text=What%20is%20a%20desert%3F,class%20of%20regions%20called%20drylands." class="dropitmes">Course-4</option>
+                    <option value="https://www.nationalgeographic.com/environment/article/deserts#:~:text=What%20is%20a%20desert%3F,class%20of%20regions%20called%20drylands." class="dropitmes">Course-5</option>
+                  </select>
+
+            </div>
+            </div>
+            <div class="temp-wrapper">
+                <div class="tag-place">
+                    <p class="tag-text"><b>Branch Name :-</b></p>
+                </div>
+                <div class="inputbox-place">
+                    
+
+                        <select name="" class="dropmenufortable" onchange="window.location.href=this.value;">
+                            <option value="none" selected disabled hidden class="dropitems">Select Branch</option>
+                            <option value="https://www.nationalgeographic.com/environment/article/deserts#:~:text=What%20is%20a%20desert%3F,class%20of%20regions%20called%20drylands." class="dropitmes">Course-1</option>
+                            <option value="https://www.nationalgeographic.com/environment/article/deserts#:~:text=What%20is%20a%20desert%3F,class%20of%20regions%20called%20drylands." class="dropitmes">Course-2</option>
+                            <option value="https://www.nationalgeographic.com/environment/article/deserts#:~:text=What%20is%20a%20desert%3F,class%20of%20regions%20called%20drylands." class="dropitmes">Course-3</option>
+                            <option value="https://www.nationalgeographic.com/environment/article/deserts#:~:text=What%20is%20a%20desert%3F,class%20of%20regions%20called%20drylands." class="dropitmes">Course-4</option>
+                            <option value="https://www.nationalgeographic.com/environment/article/deserts#:~:text=What%20is%20a%20desert%3F,class%20of%20regions%20called%20drylands." class="dropitmes">Course-5</option>
+                          </select>
+
+                </div>
+            </div>
+            <div class="temp-wrapper">
+                <div class="tag-place">
+                    <p class="tag-text"><b>Course Name :-</b></p>
+                </div>
+                <div class="inputbox-place">
+                    
+                    <select name="" class="dropmenufortable" onchange="window.location.href=this.value;">
+                        <option value="none" selected disabled hidden class="dropitems">Select Course</option>
+                        <option value="https://www.nationalgeographic.com/environment/article/deserts#:~:text=What%20is%20a%20desert%3F,class%20of%20regions%20called%20drylands." class="dropitmes">Course-1</option>
+                        <option value="https://www.nationalgeographic.com/environment/article/deserts#:~:text=What%20is%20a%20desert%3F,class%20of%20regions%20called%20drylands." class="dropitmes">Course-2</option>
+                        <option value="https://www.nationalgeographic.com/environment/article/deserts#:~:text=What%20is%20a%20desert%3F,class%20of%20regions%20called%20drylands." class="dropitmes">Course-3</option>
+                        <option value="https://www.nationalgeographic.com/environment/article/deserts#:~:text=What%20is%20a%20desert%3F,class%20of%20regions%20called%20drylands." class="dropitmes">Course-4</option>
+                        <option value="https://www.nationalgeographic.com/environment/article/deserts#:~:text=What%20is%20a%20desert%3F,class%20of%20regions%20called%20drylands." class="dropitmes">Course-5</option>
+                      </select>
+
+                </div>
+            </div>
+            <div class="btn-place">
+                <a href="/viewprogram">
+                    <button type="button" class="btn"><b>Save</b></button>
+                </a>
+            </div>
+
+
+        </div>
+            
+     <!-- content     -->
+    </div>
+
+    
+    <!-- downflex -->
+    </div>
+
+    <!-- wrapper -->
+    </div>
+<script src="admin-programme.js"></script>
+</body>
+</html>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/confirmation-of-out.css">
+    <title>Sign-out</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="alert-wrapper">
+            <div class="signplace">
+                <img src="img/e-mark.png" alt="not render" class="pic">
+            </div>
+            <div class="titleplace">
+                <p class="title"> Do you really want to Log Out?</p>
+            </div>
+            <form action="/logoutstudent" method="post">
+            <div class="buttonplace">
+                <button type="submit" class="btn" value="yes">Log Out</button>
+                <button type="submit" class="btn" id="cncbtn" value="no">Cancel</button>
+
+            </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

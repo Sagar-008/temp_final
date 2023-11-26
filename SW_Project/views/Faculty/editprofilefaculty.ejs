@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/student-common-page.css">
+    <link rel="stylesheet" href="css/faculty-profile.css">
+    <script src="https://kit.fontawesome.com/300fc8e5c2.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="wrapper">
+    <div class="upperbar">
+        <div class="weblogoplace">
+            <img src="img/logo.png" alt="not rendered" id="weblogoimg">
+        </div>
+        <div class="webnameplace">
+            <div class="webname"><p id="temp1">Student Information System</p></div>
+        </div>        
+    </div>
+    <div class="downflex">
+    <div class="sidenav">
+        <div class="sidenavopt">
+            <ul>
+                <li><a href="/facultyhome" class="bcolor"><i class="fa-solid fa-house"></i> Home </a></li>
+                <li><a href="/viewfaculty" class="bcolor"><i class="fa-solid fa-user"></i> Faculty Details </a></li>
+                <li><a href="/coursegrade" class="bcolor"><i class="fa-solid fa-file"></i> Course Grade</a></li>
+                <li><a href="/courseattendence"><i class="fa-solid fa-clipboard"></i> Course Attendence </a></li>
+                <li><a href="/changepwdfaculty"><i class="fa-solid fa-key"></i> Change Password </a></li>
+                <li><a  href="/logoutfaculty"><i class="fa-solid fa-right-to-bracket"></i> Logout </a></li>
+              </ul>
+        </div>
+        <div class="sidenavdown">
+            <div class="curruserlogo">
+
+            </div>
+            <div class="currusername">
+                <%= user[0].fullname%>
+            </div>
+        </div>
+    </div>
+
+    <div class="content">
+       
+    <form action="/updatefaculty" method="post">
+        <div class="facultyinfo">
+            <div class="facultyphoto">
+            
+                <img src="https://img.freepik.com/free-photo/chrome-sports-car-driving-asphalt-road-generative-ai_188544-8146.jpg?w=1060&t=st=1698935251~exp=1698935851~hmac=47f5a815a05a120cf78a6b9b49c6d8f4f5602348282c6fe3a28b4f758b2a7467" alt="Saurabh Tiwari" class="facultyimg">
+
+                
+            </div>
+
+            <div class="for-include-biography">
+            <div class="facultydetail">
+    
+            </h1><input id="facultyname1" name="fullname" class="facultyname" type="text" value="<%= user[0].fullname%>" disabled></h1><br>
+    
+            <input id="degree1"  class="degree" name="degree" type="text" value="<%= user[0].Education%>"><br>
+
+            <i class="fa fa-phone"></i><input id="mo-number1" name="mobileNO" class="mo-number" type="text" value="<%= user[0].phoneNo%>"><br>
+
+            <i class='fa fa-map-marker'></i><input id="location1"  name="fb" class="location" type="text" value="<%= user[0].Faculty_Block%>" disabled><br>
+
+            <i class="fa fa-envelope"></i><input id="email1"  name="myemail" class="email" type="text" value="<%= user[0].Email_id%>"><br>
+
+            <i class="fa fa-mars-stroke" aria-hidden="true"></i><input id="genderplace1" name="gender" class="genderplace" type="text" value="<%= user[0].Gender%>"><br>
+
+            <% var options={ weekday: 'long' , year: 'numeric' , month: 'long' , day: 'numeric' }; %>  
+            <% if (user[0].DOB) { %>
+                <i class="fa fa-calendar-o" aria-hidden="true"></i><input id="dobplace1"  class="dobplace" type="text" name="dob" id="" value="<%= user[0].DOB.toLocaleDateString("en-US", options)%>" </input>
+            <% } else { %>
+                <i class="fa fa-calendar-o" aria-hidden="true"></i><input id="dobplace1"  class="dobplace" type="text" name="dob" id="" placeholder="Month Date, Year"> </input>
+            <% } %>
+            
+                
+            </div>
+
+            <div class="biography">
+                <h2>Biography</h2>
+                <br>
+                
+                <textarea id="paras1" cols="110" name="biography" rows="10" type="text" class="paras">
+                <%= user[0].Biography%>
+                </textarea>
+                
+      
+            </div>
+
+            <!-- for include biography -->
+        </div>
+        
+        </div> 
+    
+        <div class="for-center">
+            <div class="img-space">
+
+            </div>
+        <div class="buttonplace">
+            <div class="buttonplace2">
+            <button class="btnedit" onclick="window.location.href='/viewfaculty'">Save Changes</button>
+            </div>
+        </div>
+        </div>
+    </form>
+
+    <!-- content     -->
+    </div>
+
+    
+    <!-- downflex -->
+    </div>
+
+    <!-- wrapper -->
+    </div>
+    <!-- <script src="js/faculty-profile.js"></script> -->
+</body>
+</html>

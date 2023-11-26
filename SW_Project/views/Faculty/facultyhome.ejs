@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/faculty-homepage.css">
+    <script src="https://kit.fontawesome.com/300fc8e5c2.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="upperbar">
+            <div class="weblogoplace">
+                <img src="logo.png" alt="not rendered" id="weblogoimg">
+            </div>
+            <div class="webnameplace">
+                <div class="webname">
+                    <p id="temp1">Student Information System</p>
+                </div>
+            </div>
+        </div>
+        <div class="downflex">
+            <div class="sidenav">
+                <div class="sidenavopt">
+                    <ul>
+                        <li><a href="/facultyhome" class="bcolor"><i class="fa-solid fa-house"></i> Home </a></li>
+                        <li><a href="/viewfaculty" class="bcolor"><i class="fa-solid fa-user"></i> Faculty Details
+                            </a></li>
+                        <li><a href="/coursegrade" class="bcolor"><i class="fa-solid fa-file"></i> Course Grade</a></li>
+                        <li><a href="/courseattendence"><i class="fa-solid fa-clipboard"></i> Course Attendence </a></li>
+                        <li><a href="/changepwdfaculty"><i class="fa-solid fa-key"></i> Change Password </a></li>
+                        <li><a href="/logoutfaculty"><i class="fa-solid fa-right-to-bracket"></i> Logout </a></li>
+                    </ul>
+                </div>
+                <div class="sidenavdown">
+                    <div class="curruserlogo">
+
+                    </div>
+                    <div class="currusername">
+                        <%= user[0].fullname%>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content">
+
+                <div class="place-for-tag">
+                    <div class="welcome-place">
+                        <p>Welcome <%= user[0].fullname%>!</p>
+                    </div>
+
+                    <br>
+                    <div class="username-place">
+                        <p> </p>
+                    </div>
+                </div>
+                <!-- content     -->
+            </div>
+
+
+            <!-- downflex -->
+        </div>
+
+        <!-- wrapper -->
+    </div>
+
+</body>
+
+</html>

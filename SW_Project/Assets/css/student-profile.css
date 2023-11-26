@@ -1,0 +1,306 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: open sans;
+}
+
+.wrapper{
+    height: 100vh;
+    width: 100vw;
+    background-image: url(https://img.freepik.com/free-photo/blue-abstract-gradient-wave-wallpaper_53876-108364.jpg?size=626&ext=jpg&ga=GA1.1.1929311289.1694337303&semt=ais);
+    background-size: cover;
+}
+
+.upperbar{
+    
+    display: flex;
+    height: 8.5vh;
+}
+
+.weblogoplace{
+    
+    width: 20vw;
+    height: 8.5vh;
+    background-color: rgba(195, 206, 226,0.4);
+}
+.webnameplace{
+    
+    width: 80vw;
+    height: 8.5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(195, 206, 226,0.4);
+}
+
+.sidenav
+{
+    width: 20vw;
+    height: 91.5vh;
+    background-color: rgba(195, 206, 226,0.4);
+    
+}
+.sidenavopt{
+    width: 20vw;
+    height: 83vh;
+    border: 0.1px solid white;
+}
+.sidenavdown{
+    width: 20vw;
+    height: 8.5vh;
+    
+}
+
+
+.downflex{
+    display: flex;
+}
+
+#weblogoimg
+{
+    height: 100%;
+    width: 100%;
+}
+
+.webname{
+    font-size: 5vh;
+}
+
+.sidenavopt li{
+    
+    height: 6vh;
+    
+    margin-bottom: 1vh;
+}
+
+.sidenavopt ul{
+    margin-top: 4vh;
+}
+.sidenavopt ul li a{
+    
+    font-size: 2.5vh;
+    color: black;
+    text-decoration: none;
+    margin-left: 0.7vw;
+    margin-bottom: 12vh;
+}
+
+.sidenavdown{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.curruserlogo{
+    
+    height: 80%;
+    width: 15%;
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWZWFVq0QIidGN0ioQJHhNBoEr1DvlH_yR05nH2_uz3tku7PvXWnDGshe5PHLqxQ91oMQ&usqp=CAU");
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-radius: 7vh;
+}
+
+.currusername
+{
+    font-size: 3vh;
+    margin-left: -2vw;
+    
+    
+}
+
+.content{
+    
+    width: 80vw;
+    height: 91.5vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    
+}
+
+/* commonpage ends gere */
+
+tr:hover{
+	/* transform: scale(1.01); */
+	transition: 0.1s;
+    background-color: rgba(195, 206, 226,0.4);
+}
+
+.profile-name{
+	color: black;
+	height: auto;
+	overflow-y: hidden;
+}
+
+.profile-header{
+    width:80vw;
+    height: 20vh;
+    /* outline:0.2vh solid black;
+    outline-offset: -0.2vh; */
+    
+}
+
+.left-box{
+    width: 18vw;
+    height: 43vh;
+    display: inline-block;
+    /* outline:0.2vh solid blue;
+    outline-offset: -0.2vh; */
+    
+    background-color: transparent;
+    box-shadow: 1px 1px 2px black;
+    border-radius: 13px;
+    backdrop-filter: blur(50px);
+    
+}
+
+.left-box:hover{
+    transform: scale(1.02);
+    transition: 0.2s;
+}
+
+.student-photo{
+    width: 15vw;
+    height: 26vh;
+    /* display: inline-block; */
+    /* outline:0.2vh solid green;
+    outline-offset: -0.2vh; */
+    margin-top: 2vh;
+    margin-left: 3vh;
+}
+
+.studentimg{
+    /* width: 10vw; */
+    height: 23vh;
+    margin-top: 2vh;
+    margin-left: 1vw;
+    /* border-radius: 10vh; */
+}
+
+.student-name{
+    /* outline:0.2vh solid green;
+    outline-offset: -0.2vh; */
+    padding: 2vh;
+    text-align: center;
+    font-weight: bold;
+    font-size: 25px;
+    font-family: sans-serif;
+    margin-top: 1vh;
+}
+
+.for-include-edit-btn{
+    
+    height: 87vh;
+    width: 54vw;
+    margin-left: 3vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.right-box{
+    width: 53vw;
+    height: 81vh;
+    display: inline-block;
+   
+    
+    
+    background-color: transparent;
+    box-shadow: 1px 1px 2px black;
+    overflow-y: auto;
+    overflow-x: hidden;
+    border-radius: 13px;
+    backdrop-filter: blur(50px);
+    
+    
+}
+
+.table{
+    height: 80vh;
+    width: 53vw;
+    /* outline:0.2vh solid green;
+    outline-offset: -0.2vh; */
+    border-collapse: collapse;
+    font-family: sans-serif;
+    
+}
+
+.table > tbody > tr > td {
+    font-size: 20px;
+    padding: 0.5vw;
+    /* border: 2px solid blue; */
+}
+
+th, td {
+    border-bottom: 1px solid #ddd;
+    
+  }
+
+h1{
+    padding: 10px;
+} 
+
+button{
+    text-align: center;
+    cursor: pointer;
+    padding: 1vh 2vh;
+    border-radius: 8px;
+    font-size: 2vh;
+}
+
+
+.edit-button:hover{
+    background-color: none;
+}
+
+
+
+
+.temp-wrapper{
+    
+    height: 95%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.buttonplace{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2vh;
+    
+}
+
+.buttonplace:hover{
+    transform: scale(1.04);
+    transition: 0.2s;
+}
+
+tr:hover{
+    transform: scale(1.01);
+    transition: 0.2s;
+}
+
+button{
+    background-color: rgb(2, 26, 51, 0.85);
+    color: white;
+}
+
+.ip-boxes-editable{
+    height: 100%;
+    width: 95%;
+    font-size: 2.2vh;
+    background: transparent;
+    border-radius: 10px;
+    border: none;
+}

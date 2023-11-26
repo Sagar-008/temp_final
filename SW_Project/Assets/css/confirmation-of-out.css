@@ -1,0 +1,114 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.wrapper{
+  
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(background-for-alert.jpg);
+  background-repeat: no-repeat;
+  object-fit: cover;
+}
+
+.alert-wrapper{
+  border: 2px solid white;
+  height: 65vh;
+  width: 35vw;
+  border-radius: 12px;
+  background-color: white;
+  box-shadow: 1.5px 1.5px 1.5px whitesmoke,
+              -1.5px -1.5px 1.5px whitesmoke;
+  transform: scale(0.85);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.signplace{
+  height: 27vh;
+  width: 100%;
+ 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5vh;
+}
+.titleplace{
+  height: 10vh;
+  width: 100%;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.discriptionplace{
+  height: 12vh;
+  width: 100%;
+ 
+  display: flex;
+  justify-content: center;
+  
+  
+}
+.buttonplace{
+  height: 10%;
+  width: 70%;
+  margin-top: 10%;
+  
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.pic{
+  
+  height: 75%;
+  width: 35%;
+  
+}
+
+.title{
+  
+  font-size: 5vh;
+}
+
+.discription{
+  
+  font-size: 3vh;
+}
+.btn{
+  color: white;
+  background-color: rgba(25, 108, 197, 0.85);
+  height: 6vh;
+  width: 7vw;
+  border: none;
+  font-size: 2.5vh;
+  border-radius: 10px;
+}
+
+.btn:hover{
+  box-shadow: 2px 2px 2px rgba(25, 108, 197, 0.85),
+  -2px -2px 2px rgba(25, 108, 197, 0.85);
+}
+
+#cncbtn{
+  background-color: rgb(215, 51, 51);
+  border: none;
+}
+
+#cncbtn:hover{
+  box-shadow: 2px 2px 2px rgb(215, 51, 51),
+              -2px -2px 2px rgb(215, 51, 51);
+}
+
+.btn:hover{
+    transition: 0.2s;
+    transform: scale(1.05);
+}
+

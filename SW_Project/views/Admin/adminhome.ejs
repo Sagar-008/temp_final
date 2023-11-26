@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin home</title>
+    <link rel="stylesheet" href="css/admin-common-page.css">
+    <script src="https://kit.fontawesome.com/300fc8e5c2.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="upperbar">
+            <div class="weblogoplace">
+                <img src="img/logo.png" alt="not rendered" id="weblogoimg">
+            </div>
+            <div class="webnameplace">
+                <div class="webname"><p id="temp1">Student Information System</p></div>
+            </div>        
+        </div>
+        <div class="downflex" action="/adminhome" , method="post">
+            <div class="sidenav">
+                <div class="sidenavopt">
+                    <ul>
+                        <li><a href='/adminhome' class="bcolor"><i class="fa-solid fa-house"></i> Home </a></li>
+                        <li id="for-down"><a href="#"><i class="fa fa-list-alt" aria-hidden="true"></i>
+                                <select name="" id="test" onmousedown="forfocus()" onblur="forblur()" class="dropmenu"
+                                    onchange="window.location.href=this.value;">
+                                    <option value="none" selected disabled hidden class="dropitems">New Registration
+                                    </option>
+                                    <option
+                                        value="/admin-student-registration"
+                                        class="dropitmes">Student Registration</option>
+                                </select>
+                            </a></li>
+
+                        <li><a href="/viewcourse"><i class="fa-solid fa-clipboard"></i>&nbsp;Course Management </a>
+                        </li>
+                        <li><a href="/viewdegree"><i class="fa fa-graduation-cap" aria-hidden="true"></i>&nbsp;Degree
+                                Management </a></li>
+                        <li><a href="/viewbranch"><i class="fa-solid fa-clipboard"></i>&nbsp;Branch Management </a>
+                        </li>
+                        <li><a href="/viewprogram"><i class="fa-solid fa-clipboard"></i>&nbsp;Programme Management
+                            </a></li>
+                        <li><a href="/addsemester"><i class="fa-solid fa-clipboard"></i>&nbsp;Semester </a></li>
+
+                        <li><a href="/admin-announcement"><i class="fa fa-bullhorn" aria-hidden="true"></i>&nbsp;Announcement </a></li>
+
+                        
+                        <li><a href="/changepwdadmin"><i class="fa-solid fa-key"></i> Change Password
+                            </a></li>
+                        <li><a href="/logoutadmin"><i class="fa-solid fa-right-to-bracket"></i> Logout </a></li>
+                    </ul>
+                </div>
+                <div class="sidenavdown">
+                    <div class="curruserlogo">
+
+                    </div>
+                    <div class="currusername">  <%= user[0].admin_name %> </div> 
+                   
+                </div>
+            </div>
+
+            <div class="content">
+                <!-- content     -->
+            </div>
+
+            <!-- downflex -->
+        </div>
+
+        <!-- wrapper -->
+    </div>
+<script src="js/admin-common-page.js"></script>
+</body>
+
+</html>
+</body>
+
+</html>

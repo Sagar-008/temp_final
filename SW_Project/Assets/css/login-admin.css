@@ -1,0 +1,158 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-color: white;
+}
+
+.container{
+    display: flex;
+    height: 50vh;
+    width: 40vw;
+    transform: scale(1.3);
+    /* transform: scaleX(1); */
+}
+
+/* Login form */
+.form{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    height: 80%;
+    align-items: center;
+    border-radius: 3%;
+    
+}
+
+.form h2{
+    font-size: 170%;
+    margin-top: 15%;
+    color: rgb(48, 101, 207);
+    margin-bottom: 15%;
+    background: transparent;
+}
+
+.formbox
+{
+    
+    height: 100%;
+    width: 50%;
+    background-color: lightblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box{
+    padding: 1%;
+    width: 80%;
+    
+    border: none;
+    /* border-bottom-color: black; */
+    /* border-radius: 4px; */
+    margin-left: -1%;
+    font-size: 100%;
+    /* border: 1px solid greenyellow; */
+
+}
+
+.submit{
+    padding: 3% 4%;
+    width: 40%;
+    /* margin-top: 11%; */
+    background-color:rgb(100, 187, 241);
+    color: white;
+    font-weight: bold;
+    border: none;
+    font-size: medium;
+    border-radius: 15px;
+    
+
+}
+
+.errplc{
+    
+    height: 11%;
+    width: 82%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    
+}
+
+.errtxt{
+    color: red;
+    font-size: 1.7vh;
+    display: none;
+}
+
+.submit:hover{
+    transform: scale(1.03);
+    transition: 0.4;
+    box-shadow: 1px 1px 5px rgb(98, 184, 203);
+}
+
+input:focus{
+    outline: none;
+}
+
+.form a{
+    margin: 4%;
+    color: black;
+}
+.side{
+    width: 50%;
+}
+/* .side img{
+
+    width:450px;
+    height: 595px;
+} */
+
+.wrapper{
+    
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(https://img.freepik.com/free-photo/blue-abstract-gradient-wave-wallpaper_53876-108364.jpg?size=626&ext=jpg&ga=GA1.1.1929311289.1694337303&semt=ais);
+    background-size: cover;
+}
+
+hr{
+    color: black;
+    width: 82%;
+    margin-top: -0.6%;
+    margin-bottom: 6%;
+}
+
+.logoandinput{
+     
+    display: flex;
+    height: 10%;
+    width: 82%;
+}
+
+.sidelogo{
+    height: 100%;
+    margin-top: -1%;
+    width: 20%;
+}
+
+#maillogo{
+    /* border: 2px solid black; */
+    transform: scale(0.9);
+}
+
+#passlogo{
+    transform: scale(0.85);
+}
+
+.sideimg{
+    
+    width: 100%;
+    height: 100%;
+    
+    
+}

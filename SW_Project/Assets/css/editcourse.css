@@ -1,0 +1,277 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: open sans;
+}
+
+.wrapper{
+    height: 100vh;
+    width: 100vw;
+    background-image: url(https://img.freepik.com/free-photo/blue-abstract-gradient-wave-wallpaper_53876-108364.jpg?size=626&ext=jpg&ga=GA1.1.1929311289.1694337303&semt=ais);
+    background-size: cover;
+}
+
+.upperbar{
+    
+    display: flex;
+    height: 8.5vh;
+}
+
+.errplc{
+    
+    height: 11%;
+    width: 82%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    
+}
+
+.errtxt{
+    color: red;
+    font-size: 1.7vh;
+    display: none;
+}
+
+.weblogoplace{
+    
+    width: 20vw;
+    height: 8.5vh;
+    background-color: rgba(195, 206, 226,0.4);
+}
+.webnameplace{
+    
+    width: 80vw;
+    height: 8.5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(195, 206, 226,0.4);
+}
+
+.sidenav
+{
+    width: 20vw;
+    height: 91.5vh;
+    background-color: rgba(195, 206, 226,0.4);
+    
+}
+.sidenavopt{
+    width: 20vw;
+    height: 83vh;
+    border: 0.1px solid white;
+    overflow-y: auto;
+}
+.sidenavdown{
+    width: 20vw;
+    height: 8.5vh;
+    
+}
+
+
+.downflex{
+    display: flex;
+}
+
+#weblogoimg
+{
+    height: 100%;
+    width: 100%;
+}
+
+.webname{
+    font-size: 5vh;
+}
+
+.sidenavopt li{
+    
+    height: 6vh;
+    
+    margin-bottom: 1vh;
+}
+
+.sidenavopt ul{
+    margin-top: 4vh;
+}
+.sidenavopt ul li a{
+    
+    font-size: 2.5vh;
+    color: black;
+    text-decoration: none;
+    margin-left: 0.7vw;
+    margin-bottom: 12vh;
+}
+
+.sidenavdown{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.curruserlogo{
+    
+    height: 80%;
+    width: 15%;
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWZWFVq0QIidGN0ioQJHhNBoEr1DvlH_yR05nH2_uz3tku7PvXWnDGshe5PHLqxQ91oMQ&usqp=CAU");
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-radius: 7vh;
+}
+
+.currusername
+{
+    font-size: 3vh;
+    margin-left: -2vw;
+    
+    
+}
+
+.content{
+    
+    width: 80vw;
+    height: 91.5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+select{
+    /* border: 2px solid red; */
+    height: 4vh;
+    width: 13vw;
+    font-size: 2.5vh;
+  
+    background: transparent;
+    border: none;
+    outline: none;
+}
+
+/* background-color: rgba(195, 206, 226,0.4); */
+option{
+    background-color: rgba(170, 206, 226, 0.4);
+    border: none;
+    outline: none;
+}
+
+/* common page ends here */
+
+.editcourse-wrapper{
+  border: 1px solid black;
+  height: 70%;
+  padding: 6vh;
+  width: 40%;
+  border-radius: 13px;
+  backdrop-filter: blur(50px);
+  box-shadow: 2px 2px 2px black;
+  border: 2px solid whitesmoke;
+}
+
+.editcourse-wrapper:hover{
+    transform: scale(1.02);
+    transition: 0.2s;
+}
+
+.maintag-place{
+    
+    height: 15%;
+    width: 100%;
+    margin-bottom: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    color: whitesmoke;
+    border-radius: 13px;
+    background-color: rgb(2, 26, 51);
+    
+}
+
+.temp-wrapper{
+    
+    height: 7vh;
+    width: 100%;
+    margin-bottom: 3vh;
+    display: flex;
+   
+}
+
+.tag-place{
+    
+    height: 100%;
+    width: 38%;
+    display: flex;
+    align-items: center;
+}
+
+.tag-text{
+    font-size: 2.2vh;
+    margin-left: 1vw;
+}
+
+.inputbox-place{
+    
+    height: 100%;
+    width: 62%;
+    display: flex;
+    align-items: center;
+}
+
+.ip-box{
+    height: 80%;
+    font-size: 2vh;
+    background-color: transparent;
+    text-decoration: none;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.ip-box:focus{
+    transform: scale(1.04);
+    transition: 0.2s;
+    outline-color: cornflowerblue;
+}
+
+#ip-name{
+    width: 95%;
+}
+
+#ip-code{
+    width: 95%;
+}
+
+#ip-credit{
+    width: 95%;
+}
+
+.btn-place{
+     
+     height: 6vh;
+     width: 100%;
+     margin-top: 8vh;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+}
+
+
+.btn{
+    color: white;
+    background-color: rgb(2, 26, 51);
+    border: 1px solid whitesmoke;
+    height: 90%;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    border-radius: 10px;
+    font-size: 2.3vh;
+  
+  }
+  
+  .btn:hover{
+      transition: 0.2s;
+      transform: scale(1.1);
+  }
+
