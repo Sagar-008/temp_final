@@ -57,10 +57,10 @@ app.use('/', require('./Server/Routes/router'));
 
 //set static paths
 app.use(express.static(__dirname + '/Assets'));
-// app.set('views', path.join(__dirname, 'views'));
-app.use('/Admin',express.static(path.resolve(__dirname + '/views/Admin')));
-app.use('/Faculty',express.static(path.resolve(__dirname + '/views/Faculty')));
-app.use('/Student',express.static(path.resolve(__dirname + '/views/Student')));
+app.set('views', path.join(__dirname, 'views'));
+// app.use('/Admin',express.static(path.resolve(__dirname + '/views/Admin')));
+// app.use('/Faculty',express.static(path.resolve(__dirname + '/views/Faculty')));
+// app.use('/Student',express.static(path.resolve(__dirname + '/views/Student')));
 
 
 // Admin.plugin(passportLocalMongoose);
