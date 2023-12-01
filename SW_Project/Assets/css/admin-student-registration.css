@@ -145,7 +145,7 @@ option{
 
 .addcourse-wrapper{
   
-  height: 80%;
+  height: 90%;
   padding: 6vh;
   width: 50%;
   border-radius: 13px;
@@ -161,7 +161,7 @@ option{
 
 .maintag-place{
     
-    height: 20%;
+    height: 14%;
     width: 100%;
     margin-bottom: 5vh;
     display: flex;
@@ -251,7 +251,7 @@ option{
      
      height: 6vh;
      width: 100%;
-     margin-top: 5vh;
+     margin-top: 4vh;
      display: flex;
      justify-content: center;
      align-items: center;
@@ -275,3 +275,16 @@ option{
       transform: scale(1.1);
   }
 
+
+  .errplc{
+    
+    height: 3vh;
+    width: 100%;
+    
+  }
+
+  .errtxt{
+    display: none;
+    color: red;
+    font-size: 2vh;
+  }

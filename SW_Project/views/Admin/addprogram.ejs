@@ -13,22 +13,22 @@
     <script>
 
         function validateForm() {
-            var x = document.forms["nam"]["degree"].value;
-            var y = document.forms["nam"]["branch"].value;
-            var z = document.forms["nam"]["courses"].value;
+            var x = document.forms["nam"]["degree"];
+            var y = document.forms["nam"]["branch"];
+            var z = document.forms["nam"]["courses"];
 
-            if ( x == "") {
+            if (x.selectedIndex == 0) {
             document.querySelector(".errtxt").textContent="Please Enter Degree";
             document.querySelector(".errtxt").style.display="flex";
             return false;
             }
-            if(y == "")
+            if(y.selectedIndex == 0)
             {
                 document.querySelector(".errtxt").textContent="Please Enter Branch";
                 document.querySelector(".errtxt").style.display="flex";
                 return false;
             }
-            if(z == "")
+            if(z.selectedIndex == 0)
             {
                 document.querySelector(".errtxt").textContent="Please select Courses";
                 document.querySelector(".errtxt").style.display="flex";
@@ -82,7 +82,7 @@
                         
                         <li><a href="/changepwdadmin"><i class="fa-solid fa-key"></i> Change Password
                             </a></li>
-                        <li><a href="/adminlogin"><i class="fa-solid fa-right-to-bracket"></i> Logout </a></li>
+                        <li><a href="/logoutadmin"><i class="fa-solid fa-right-to-bracket"></i> Logout </a></li>
                     </ul>
                 </div>
                 <div class="sidenavdown">

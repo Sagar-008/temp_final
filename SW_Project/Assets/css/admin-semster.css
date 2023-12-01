@@ -343,3 +343,19 @@ tr:hover{
     transition: 0.2s;
     outline-color: cornflowerblue;
 }
+
+.errplc{
+    
+    height: 3vh;
+    width: 100%;
+    margin-top: 2vh;
+    
+  }
+
+  .errtxt{
+    display: none;
+    justify-content: center;
+    color: red;
+    font-size: 2vh;
+    
+  }

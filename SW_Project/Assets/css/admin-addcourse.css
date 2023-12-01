@@ -159,7 +159,7 @@ option{
 
 .addcourse-wrapper{
   border: 1px solid black;
-  height: 70%;
+  height: 72%;
   padding: 6vh;
   width: 40%;
   border-radius: 13px;
@@ -249,7 +249,7 @@ option{
      
      height: 6vh;
      width: 100%;
-     margin-top: 8vh;
+     margin-top: 4vh;
      display: flex;
      justify-content: center;
      align-items: center;
@@ -271,5 +271,17 @@ option{
   .btn:hover{
       transition: 0.2s;
       transform: scale(1.1);
+  }
+
+  .errplc{
+    
+    height: 3vh;
+    width: 100%;
+  }
+
+  .errtxt{
+    display: none;
+    color: red;
+    font-size: 2vh;
   }
 

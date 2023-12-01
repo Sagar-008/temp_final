@@ -6,6 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="css/login-student.css" rel="stylesheet">
     <link rel="stylesheet" href="css/login-student.css">
+
+    <script>
+
+        function validateForm() {
+            var x = document.forms["nam"]["s_email"].value;
+            
+            if (x == "") {
+                document.querySelector(".errtxt").textContent = "Please Enter Email Address";
+                document.querySelector(".errtxt").style.display = "flex";
+                return false;
+            }
+           
+        }
+
+    </script>
+
     <title>Student Login</title>
 </head>
 
@@ -17,7 +33,7 @@
     </div>
     
     <div class="formbox">
-    <form action="/forgotpwdstudent" class="form" method="post">
+    <form action="/forgotpwdstudent" class="form" method="post" onsubmit="return validateForm()" name="nam">
         <h2>Student
         </h2>
         <div class="logoandinput">
@@ -25,7 +41,9 @@
         <input type="email" name="s_email" class="box" placeholder="Enter E-mail">
         </div>
         <hr>
-        
+        <div class="errplc">
+            <p class="errtxt">Please Enter Email Address</p>
+        </div>
         <input type="submit" value="Reset" class="submit">
     </form>
     </div>

@@ -32,6 +32,11 @@
                 document.querySelector(".errtxt").style.display="flex";
                 return false;
             }
+            if (isNaN(z) || parseFloat(z) > 5) {
+            document.querySelector(".errtxt").textContent = "Credit must be  lesser than 5";
+            document.querySelector(".errtxt").style.display = "flex";
+            return false;
+        }
         }
   
     </script>
@@ -80,7 +85,7 @@
                         
                         <li><a href="/changepwdadmin"><i class="fa-solid fa-key"></i> Change Password
                             </a></li>
-                        <li><a href="/adminlogin"><i class="fa-solid fa-right-to-bracket"></i> Logout </a></li>
+                        <li><a href="/logoutadmin"><i class="fa-solid fa-right-to-bracket"></i> Logout </a></li>
                     </ul>
                 </div>
                 <div class="sidenavdown">

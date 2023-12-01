@@ -5,6 +5,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="css/login-admin.css" rel="stylesheet">
+
+    <script>
+
+        function validateForm() {
+            var x = document.forms["nam"]["a_email"].value;
+            
+            if (x == "") {
+                document.querySelector(".errtxt").textContent = "Please Enter Email Address";
+                document.querySelector(".errtxt").style.display = "flex";
+                return false;
+            }
+           
+        }
+
+    </script>
+
+
     <title>Admin Login</title>
 </head>
 
@@ -17,7 +34,7 @@
             </div>
 
             <div class="formbox">
-                <form action="/forgotpwdadmin" class="form" method="post">
+                <form action="/forgotpwdadmin" class="form" method="post" onsubmit="return validateForm()" name="nam">
                     <h2>Admin
                     </h2>
                     <div class="logoandinput">
@@ -27,6 +44,9 @@
                         <input type="email" name="a_email" class="box" placeholder="Enter E-mail">
                     </div>
                     <hr>
+                    <div class="errplc">
+                        <p class="errtxt">Please Enter Email Address</p>
+                    </div>
                     <input type="submit" value="Reset" class="submit">
                 </form>
             </div>

@@ -45,7 +45,7 @@
 
                     </div>
                     <div class="currusername">
-                        <%= user[0].firstname%>
+                        <%= user[0].firstname%> <%= user[0].lastname%>
                     </div>
                 </div>
             </div>
@@ -94,8 +94,7 @@
                                             </td>
                                             <td>
                                                 <center>
-                                                <input class="ip-boxe" type="checkbox" <%= coursesTaught[i].Course_type ? 'checked' : '' %> <%= coursesTaught[i].Course_type ? 'disabled' : '' %> class="center" name="register">
-                                                    value="<%= courses[i]._id %>">
+                                                <input class="ip-boxe" type="checkbox" class="center" name="register" value="<%= courses[i]._id %>" <%= coursesTaught[i].Course_type ? 'checked' : '' %>>
                                                 </center>
                                             </td>
 

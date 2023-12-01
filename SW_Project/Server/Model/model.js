@@ -39,6 +39,7 @@ const StudentSchema = new mongoose.Schema({
     Address: String,
     Personal_Email_id: {
         type: String,
+        required: true,
         // match: /^[\w-]+(\.[\w-]+)*@[\w-]+(\.[\w-]+)+$/,
     },
     Password: {
@@ -57,6 +58,7 @@ const StudentSchema = new mongoose.Schema({
     Profile_image: Buffer,
     ProgramRegistered: {
         type: mongoose.Schema.Types.ObjectId, ref: "Program",
+        required: true,
     },
     Fee_Paid: {
         type: Boolean,
@@ -86,8 +88,7 @@ const FacultySchema = new mongoose.Schema({
     },
     
     Education: {
-        type: String,
-        required: true
+        type: String, 
     },
 
     Password: {

@@ -6,12 +6,59 @@
     <title>Document</title>
     <link rel="stylesheet" href="css/admin-semster.css">
     <script src="https://kit.fontawesome.com/300fc8e5c2.js" crossorigin="anonymous"></script>
+
+    <script>
+
+        function validateForm() {
+           
+            var x = document.forms["nam"]["name"].value;
+            var a = document.forms["nam"]["degree"];
+            var y = document.forms["nam"]["branch"];
+            var z = document.forms["nam"]["batch"];
+            var b = document.getElementById("file-up").files.length == 0;
+
+            
+            if (x == "") {
+                document.querySelector(".errtxt").textContent = "Please Enter the name of Semester";
+                document.querySelector(".errtxt").style.display = "flex";
+                return false;
+            }
+
+            if (a.selectedIndex == 0) {
+                document.querySelector(".errtxt").textContent = "Please Select Degree";
+                document.querySelector(".errtxt").style.display = "flex";
+                return false;
+            }
+
+            if (y.selectedIndex == 0) {
+                document.querySelector(".errtxt").textContent = "Please Select Branch";
+                document.querySelector(".errtxt").style.display = "flex";
+                return false;
+            }
+
+            if (z.selectedIndex == 0) {
+                document.querySelector(".errtxt").textContent = "Please Select Batch";
+                document.querySelector(".errtxt").style.display = "flex";
+                return false;
+            }
+
+            if (b) { 
+                document.querySelector(".errtxt").textContent = "Please Upload File";
+                document.querySelector(".errtxt").style.display = "flex";
+                return false;
+            }
+          
+        }
+
+    </script>
+
+
 </head>
 <body>
     <div class="wrapper">
         <div class="upperbar">
             <div class="weblogoplace">
-                <img src="logo.png" alt="not rendered" id="weblogoimg">
+                <img src="img/logo.png" alt="not rendered" id="weblogoimg">
             </div>
             <div class="webnameplace">
                 <div class="webname">
@@ -50,7 +97,7 @@
                         
                         <li><a href="/changepwdadmin"><i class="fa-solid fa-key"></i> Change Password
                             </a></li>
-                        <li><a href="/adminlogin"><i class="fa-solid fa-right-to-bracket"></i> Logout </a></li>
+                        <li><a href="/logoutadmin"><i class="fa-solid fa-right-to-bracket"></i> Logout </a></li>
                     </ul>
                 </div>
                 <div class="sidenavdown">
@@ -65,7 +112,7 @@
 
             <div class="content">
 
-                <form action="/addsemester" method="post" enctype="multipart/form-data">
+                <form action="/addsemester" method="post" enctype="multipart/form-data" onsubmit="return validateForm()" name="nam">
 
                     <div class="table-wrapper" id="upper-sec">
 
@@ -151,7 +198,7 @@
                                                     </center>
                                                 </td>
                                                 <td class="center">
-                                                    <center><input type="file" class="file-ip" name="excelfile"></center>
+                                                    <center><input type="file" class="file-ip" name="excelfile" id="file-up"></center>
                                                 </td>
                                                 <td>
                                                     <div class="btn-place">
@@ -500,6 +547,9 @@
                 </div>
                 </form> -->
 
+                <div class="errplc">
+                    <p class="errtxt">Please Enter Email Address</p>
+                </div>
 
 
                 <!-- content     -->

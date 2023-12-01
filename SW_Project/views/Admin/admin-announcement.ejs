@@ -6,6 +6,35 @@
     <title>Document</title>
     <link rel="stylesheet" href="css/admin-announcement.css">
     <script src="https://kit.fontawesome.com/300fc8e5c2.js" crossorigin="anonymous"></script>
+
+    <script>
+
+      function validateForm() {
+          var x = document.forms["nam"]["title"].value;
+          var y = document.forms["nam"]["description"].value;
+          var z = document.forms["nam"]["due_date"].value;
+         
+          
+          if (x == "") {
+              document.querySelector(".errtxt").textContent = "Please Enter Title";
+              document.querySelector(".errtxt").style.display = "flex";
+              return false;
+          }
+          if (y == "") {
+              document.querySelector(".errtxt").textContent = "Please Enter Description";
+              document.querySelector(".errtxt").style.display = "flex";
+              return false;
+          }
+          if (z == "") {
+              document.querySelector(".errtxt").textContent = "Please Enter due date";
+              document.querySelector(".errtxt").style.display = "flex";
+              return false;
+          }
+          
+      }
+
+  </script>
+
 </head>
 <body>
     <div class="wrapper">
@@ -48,7 +77,7 @@
                 
                 <li><a href="/changepwdadmin"><i class="fa-solid fa-key"></i> Change Password
                     </a></li>
-                <li><a href="/adminlogin"><i class="fa-solid fa-right-to-bracket"></i> Logout </a></li>
+                <li><a href="/logoutadmin"><i class="fa-solid fa-right-to-bracket"></i> Logout </a></li>
             </ul>
             </div>
             <div class="sidenavdown">
@@ -65,7 +94,7 @@
        
 
             <div class="announcement-box">
-                <form action="/admin-announcement" method="post">
+                <form action="/admin-announcement" method="post"  onsubmit="return validateForm()" name="nam">
                   <label>
                      <br>
                      <div class="announcement-title">
@@ -91,7 +120,11 @@
     
     
                 </div>
-    
+                
+                <div class="errplc">
+                  <p class="errtxt">Please Enter Email Address</p>
+                </div>
+
                 <div class="add-button">
                   <button type="submit">
                     Add

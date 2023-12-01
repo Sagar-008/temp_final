@@ -111,12 +111,22 @@ exports.p_adminlogin = async (req, res) => {         //passport??????
                 //console.log("nik");
 
             } else {
-                res.status(400).json({ error: "Password doesn't match" });
+                const title = "ERROR";
+                const message = "Password does not match!";
+                const icon = "error";
+                const href = "/Adminlogin";
+                res.render("Admin/alert.ejs", { title, message, icon, href });
+
+
                 console.log("nik");
             }
         } else {
             console.log(req.body);
-            res.status(400).json({ error: "User doesn't exist" });
+            const title = "ERROR";
+            const message = "User does not exists!";
+            const icon = "error";
+            const href = "/adminlogin";
+            res.render("Admin/alert.ejs", { title, message, icon, href });
         }
     } catch (err) {
         res.status(400).json({ err });
@@ -130,7 +140,7 @@ exports.p_facultylogin = async (req, res) => {
         if (user) {
             //check if password matches
             const result = await bcrypt.compare(req.body.f_password, user.Password);
-            //const result = await req.body.f_password === user.Password;
+            // const result = await req.body.f_password === user.Password;
 
             if (result) {
                 const secret = "sagar";
@@ -153,10 +163,18 @@ exports.p_facultylogin = async (req, res) => {
                 console.log(verify_one);
                 res.redirect("/facultyhome");
             } else {
-                res.status(400).json({ error: "Password doesn't match" });
+                const title = "ERROR";
+                const message = "Password does not match!";
+                const icon = "error";
+                const href = "/facultylogin";
+                res.render("Admin/alert.ejs", { title, message, icon, href });
             }
         } else {
-            res.status(400).json({ error: "User doesn't exist" });
+            const title = "ERROR";
+            const message = "User does not exists!";
+            const icon = "error";
+            const href = "/facultylogin";
+            res.render("Admin/alert.ejs", { title, message, icon, href });
         }
     } catch (err) {
         res.status(400).json({ err });
@@ -202,10 +220,18 @@ exports.p_studentlogin = async (req, res) => {
                 //console.log("nik");
             }
             else {
-                res.status(400).json({ error: "Password doesn't match" });
+                const title = "ERROR";
+                const message = "Password does not match!";
+                const icon = "error";
+                const href = "/Studentlogin";
+                res.render("Admin/alert.ejs", { title, message, icon, href });
             }
         } else {
-            res.status(400).json({ error: "User doesn't exist" });
+            const title = "ERROR";
+            const message = "User does not exists!";
+            const icon = "error";
+            const href = "/Studentlogin";
+            res.render("Admin/alert.ejs", { title, message, icon, href });
         }
     } catch (err) {
         res.status(400).json({ err });
@@ -273,12 +299,11 @@ exports.g_studentregistration = (isLoggedInstudent, async (req, res) => {
 exports.p_studentregistration = (isLoggedInstudent, async (req, res) => { ////  mail valu baki
     try {
         console.log(req.body.i_email.split("@")[0].length);
-        if(req.body.i_email.split("@")[0].length!=9 ) 
-        {
-            console.log("asdsfsgfd");
-            return;
-        }
-        if (req.body.i_email.split("@")[1] != "daiict.ac.in") {
+        // if (req.body.i_email.split("@")[0].length != 9) {
+        //     console.log("asdsfsgfd");
+        //     return;
+        // }
+        if (req.body.i_email.split("@")[1] != "daiict.ac.in" || req.body.i_email.split("@")[0].length != 9) {
             const title = "ERROR";
             const message = "Invalid Email";
             const icon = "error";
@@ -304,7 +329,12 @@ exports.p_studentregistration = (isLoggedInstudent, async (req, res) => { ////  
         if (!existingProgram) {
             // Handle the case when the Program does not exist
             console.error('Program not found based on degree and branch names.');
-            return; // or throw an error, depending on your use case
+            const title = "ERROR";
+            const message = "Program not found based on degree and branch selected!";
+            const icon = "error";
+            const href = "/admin-student-registration";
+            res.render("Admin/alert.ejs", { title, message, icon, href });
+            return;
         }
 
 
@@ -355,7 +385,7 @@ exports.p_studentregistration = (isLoggedInstudent, async (req, res) => { ////  
 
             const mailOptions = {
                 from: '202101234@daiict.ac.in', // Sender's email address
-                to: req.body.p_email,//'202101234@daiict.ac.in', // Recipient's email address
+                to: req.body.p_email,//'202101234@daiict.ac.in', // Recipient's persnol email address
                 subject: "Account Created", // Subject of the email
                 text: 'This is a test email sent from Node.js using Nodemailer.',
                 html: `
@@ -1091,7 +1121,7 @@ exports.logoutadmin = async (req, res, next) => {
         const title = "SUCCESS";
         const message = "You have logged out successfully!";
         const icon = "success";
-        const href = "/adminlogin";
+        const href = "/";
         res.render("Admin/alert.ejs", { title, message, icon, href });
 
     } catch (err) {
@@ -1572,7 +1602,7 @@ exports.p_forgotpwdfaculty = async (req, res) => {
                 const title = "SUCCESS";
                 const message = "Check your mail to access your new password";
                 const icon = "success";
-                const href = "/facultyLogin";
+                const href = "/studentlogin";
                 res.render("Admin/alert.ejs", { title, message, icon, href });
             })
         }
@@ -1590,7 +1620,7 @@ exports.logoutfaculty = async (req, res, next) => {
         const title = "SUCCESS";
         const message = "You have logged out successfully!";
         const icon = "success";
-        const href = "/facultyLogin";
+        const href = "/";
         res.render("Admin/alert.ejs", { title, message, icon, href });
     } catch (err) {
         // This block will only execute if isLoggedInstudent returns false
@@ -1697,6 +1727,7 @@ exports.p_updatestudent = async (req, res) => {
             const icon = "error";
             const href = "/viewstudent";
             res.status(401).render("Admin/alert.ejs", { title, message, icon, href });
+            return;
         }
 
         // const validemail = validator.validate(req.body.myemail);
@@ -1748,6 +1779,7 @@ exports.p_updatestudent = async (req, res) => {
 
 exports.g_courseregistration = async (req, res) => {
     try {
+
         const last_sem = await Course_Allotment.find().sort({ Date_created: -1 });
         const sem_name = last_sem[0].Semester_name;
 
@@ -1808,7 +1840,7 @@ exports.g_courseregistration = async (req, res) => {
 exports.p_courseregistration = async (req, res) => {
     try {
 
-        // console.log(req.body);
+        console.log(req.body);
 
         if (req.body.register.length !== 5) {
             const title = "ERROR";
@@ -1884,7 +1916,7 @@ exports.g_viewgrade = async (req, res) => {
             const href = "/studenthome";
             res.render("Admin/alert.ejs", { title, message, icon, href });
 
-            return res.status(400).send("Student has not registered yet!");
+            return ;
         }
         const enrolledcourse = courses.courseEnrolled;
 
@@ -1911,7 +1943,17 @@ exports.g_viewgrade = async (req, res) => {
             }
         ])
         console.log("Hello");
+        console.log(data.length);
         console.log(data);
+        if (data.length!=5) {
+            const title = "ERROR";
+            const message = "Faculty has not uploaded grade yet!";
+            const icon = "error";
+            const href = "/studenthome";
+            res.render("Admin/alert.ejs", { title, message, icon, href });
+
+            return ;
+        }
 
         const Courses = [];
         for (let i = 0; i < enrolledcourse.length; i++) {
@@ -1921,6 +1963,7 @@ exports.g_viewgrade = async (req, res) => {
         }
         res.render("Student/result.ejs", { student, sem_name, data, Courses, p_name });
     } catch (err) {
+        console.error(err);
         res.status(500).send("An error occured while fetching semester data");
     }
 }
@@ -1984,22 +2027,16 @@ exports.g_viewattendence = async (req, res) => {
         ])
         console.log("Hello");
         console.log(data);
+        if (data.length!=5) {
+            const title = "ERROR";
+            const message = "Faculty has not uploaded attendence yet!";
+            const icon = "error";
+            const href = "/studenthome";
+            res.render("Admin/alert.ejs", { title, message, icon, href });
 
-        // for(let i=0;i<enrolledcourse.length; i++)
-        // {
-        //     const courseID = enrolledcourse[i];
-        //     //console.log(courseID);
+            return ;
+        }
 
-        //     const data = await Attendance.find({
-        //         A_courseEnrolled : enrolledcourse,
-        //         'Attendance_data' : {
-        //             $elemMatch : {
-        //                 'Student_enrolled' : student[0].stud_id
-        //             }
-        //         }
-        //     }).exec();
-        // }
-        // //console.log(data);
         const Courses = [];
         for (let i = 0; i < enrolledcourse.length; i++) {
             const x = enrolledcourse[i];
@@ -2284,7 +2321,7 @@ exports.p_forgotpwdstudent = async (req, res) => {
                 const title = "SUCCESS";
                 const message = "Check your mail to access your new password";
                 const icon = "success";
-                const href = "/adminLogin";
+                const href = "/studentlogin";
                 res.render("Admin/alert.ejs", { title, message, icon, href });
             })
         }
@@ -2302,7 +2339,7 @@ exports.logoutstudent = (async (req, res) => {
         const title = "SUCCESS";
         const message = "You have logged out successfully!";
         const icon = "success";
-        const href = "/studentlogin";
+        const href = "/";
         res.render("Admin/alert.ejs", { title, message, icon, href });
     } catch (err) {
         // This block will only execute if isLoggedInstudent returns false

@@ -110,7 +110,7 @@ body{
     
     height: 80%;
     width: 15%;
-    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWZWFVq0QIidGN0ioQJHhNBoEr1DvlH_yR05nH2_uz3tku7PvXWnDGshe5PHLqxQ91oMQ&usqp=CAU");
+    background-image: url("../img/profile.png");
     background-size: contain;
     background-repeat: no-repeat;
     border-radius: 7vh;
@@ -287,4 +287,20 @@ tr:hover{
   .file-ip{
     height: 90%;
     font-size: 1.9vh;
+  }
+
+  .errplc{
+    
+    height: 3vh;
+    width: 100%;
+    margin-top: 2vh;
+    
+  }
+
+  .errtxt{
+    display: none;
+    justify-content: center;
+    color: red;
+    font-size: 2vh;
+    
   }

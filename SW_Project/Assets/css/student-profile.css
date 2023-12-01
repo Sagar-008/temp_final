@@ -98,7 +98,7 @@ body{
     
     height: 80%;
     width: 15%;
-    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWZWFVq0QIidGN0ioQJHhNBoEr1DvlH_yR05nH2_uz3tku7PvXWnDGshe5PHLqxQ91oMQ&usqp=CAU");
+    background-image: url("../img/man.png");
     background-size: contain;
     background-repeat: no-repeat;
     border-radius: 7vh;
@@ -172,7 +172,7 @@ tr:hover{
     /* outline:0.2vh solid green;
     outline-offset: -0.2vh; */
     margin-top: 2vh;
-    margin-left: 3vh;
+    margin-left: 5vh;
 }
 
 .studentimg{

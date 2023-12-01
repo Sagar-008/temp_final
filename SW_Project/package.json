@@ -1,10 +1,10 @@
 {
   "name": "student_information_system",
   "version": "1.0.0",
-  "main": "Server.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node Server.js"
+    "start": "nodemon Server.js"
   },
   "keywords": [],
   "author": "",

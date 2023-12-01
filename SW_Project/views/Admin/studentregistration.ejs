@@ -15,40 +15,36 @@
             var x = document.forms["nam"]["name"].value;
             var y = document.forms["nam"]["p_email"].value;
             var z = document.forms["nam"]["i_email"].value;
-            var a = document.forms["nam"]["degree"].value;
-            var b = document.forms["nam"]["branch"].value;
-
-            if ( x == "") {
-            document.querySelector(".errtxt").textContent="Please Enter Student Name";
-            document.querySelector(".errtxt").style.display="flex";
-            return false;
-            }
-            if(y == "")
-            {
-                document.querySelector(".errtxt").textContent="Please Enter Personal Email";
-                document.querySelector(".errtxt").style.display="flex";
+            var a = document.forms["nam"]["degree"];
+            var b = document.forms["nam"]["branch"];
+            
+            if (x == "") {
+                document.querySelector(".errtxt").textContent = "Please Enter Student Name";
+                document.querySelector(".errtxt").style.display = "flex";
                 return false;
             }
-            if(z == "")
-            {
-                document.querySelector(".errtxt").textContent="Please Enter Institute Email";
-                document.querySelector(".errtxt").style.display="flex";
+            if (y == "") {
+                document.querySelector(".errtxt").textContent = "Please Enter Personal Email";
+                document.querySelector(".errtxt").style.display = "flex";
                 return false;
             }
-            if(a == "")
-            {
-                document.querySelector(".errtxt").textContent="Please Select Degree";
-                document.querySelector(".errtxt").style.display="flex";
+            if (z == "") {
+                document.querySelector(".errtxt").textContent = "Please Enter Institute Email";
+                document.querySelector(".errtxt").style.display = "flex";
                 return false;
             }
-            if(b == "")
-            {
-                document.querySelector(".errtxt").textContent="Please Select Branch";
-                document.querySelector(".errtxt").style.display="flex";
+            if (a.selectedIndex == 0) {
+                document.querySelector(".errtxt").textContent = "Please Select Degree";
+                document.querySelector(".errtxt").style.display = "flex";
+                return false;
+            }
+            if (b.selectedIndex == 0) {
+                document.querySelector(".errtxt").textContent = "Please Select Branch";
+                document.querySelector(".errtxt").style.display = "flex";
                 return false;
             }
         }
-  
+
     </script>
 </head>
 
@@ -56,7 +52,7 @@
     <div class="wrapper">
         <div class="upperbar">
             <div class="weblogoplace">
-                <img src="logo.png" alt="not rendered" id="weblogoimg">
+                <img src="img/logo.png" alt="not rendered" id="weblogoimg">
             </div>
             <div class="webnameplace">
                 <div class="webname">
@@ -74,9 +70,8 @@
                                     onchange="window.location.href=this.value;">
                                     <option value="none" selected disabled hidden class="dropitems">New Registration
                                     </option>
-                                    <option
-                                        value="/admin-student-registration"
-                                        class="dropitmes">Student Registration</option>
+                                    <option value="/admin-student-registration" class="dropitmes">Student Registration
+                                    </option>
                                 </select>
                             </a></li>
 
@@ -90,20 +85,21 @@
                             </a></li>
                         <li><a href="/addsemester"><i class="fa-solid fa-clipboard"></i>&nbsp;Semester </a></li>
 
-                        <li><a href="/admin-announcement"><i class="fa fa-bullhorn" aria-hidden="true"></i>&nbsp;Announcement </a></li>
+                        <li><a href="/admin-announcement"><i class="fa fa-bullhorn"
+                                    aria-hidden="true"></i>&nbsp;Announcement </a></li>
 
-                        
+
                         <li><a href="/changepwdadmin"><i class="fa-solid fa-key"></i> Change Password
                             </a></li>
-                        <li><a href="/adminlogin"><i class="fa-solid fa-right-to-bracket"></i> Logout </a></li>
+                        <li><a href="/logoutadmin"><i class="fa-solid fa-right-to-bracket"></i> Logout </a></li>
                     </ul>
-                    </div>
+                </div>
                 <div class="sidenavdown">
                     <div class="curruserlogo">
 
                     </div>
                     <div class="currusername">
-                        <%= user[0].admin_name %> 
+                        <%= user[0].admin_name %>
                     </div>
                 </div>
             </div>
@@ -114,14 +110,15 @@
                     <div class="maintag-place">
                         <h1>Student Registration</h1>
                     </div>
-                    <form action="/admin-student-registration" class="form" method="post" onsubmit="return validateForm()" name="nam">
-                   
+                    <form action="/admin-student-registration" class="form" method="post"
+                        onsubmit="return validateForm()" name="nam">
+
                         <div class="temp-wrapper">
                             <div class="tag-place">
                                 <p class="tag-text"><b>Student Name :-</b></p>
                             </div>
                             <div class="inputbox-place">
-                                <input type="text" name="name"  class="ip-box" id="ip-name">
+                                <input type="text" name="name" class="ip-box" id="ip-name">
                                 <hr>
                             </div>
                         </div>
@@ -144,7 +141,7 @@
                                 <hr>
                             </div>
                         </div>
-                        
+
                         <div class="temp-wrapper">
                             <div class="tag-place">
                                 <p class="tag-text"><b>Select Degree :-</b></p>
@@ -152,11 +149,12 @@
                             <div class="inputbox-place">
                                 <select name="degree" id="course-dropdown" class="dropmenu">
 
-                                    <option value="none" 
-                                        class="dropitems">Select Degree</option>
-                                        <% for(var i=0;i<degree.length;i++) { %>
-                                            <option class="dropitmes" value="<%= degree[i]._id %>"><%= degree[i].Degree_name %></option>
-                                            <% } %>
+                                    <option  value="none" class="dropitems">Select Degree</option>
+                                    <% for(var i=0;i<degree.length;i++) { %>
+                                        <option class="dropitmes" value="<%= degree[i]._id %>">
+                                            <%= degree[i].Degree_name %>
+                                        </option>
+                                        <% } %>
                                 </select>
                                 <hr>
                             </div>
@@ -169,11 +167,12 @@
                             <div class="inputbox-place">
                                 <select name="branch" id="course-dropdown" class="dropmenu">
 
-                                    <option value="none" 
-                                        class="dropitems">Select Branch</option>
-                                        <% for(var i=0;i<branch.length;i++) { %>
-                                            <option class="dropitmes" value="<%= branch[i]._id %>"><%= branch[i].Branch_name %></option>
-                                            <% } %>
+                                    <option value="none" class="dropitems">Select Branch</option>
+                                    <% for(var i=0;i<branch.length;i++) { %>
+                                        <option class="dropitmes" value="<%= branch[i]._id %>">
+                                            <%= branch[i].Branch_name %>
+                                        </option>
+                                        <% } %>
                                 </select>
                                 <hr>
                             </div>
