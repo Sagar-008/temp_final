@@ -41,7 +41,7 @@ app.use(cookieParser());
 
 
 const saltRounds = 10;
-
+// /////
 exports.homepage = (req, res) => {
     res.render("user-choice");
 }
