@@ -45,58 +45,12 @@ app.use(session({
   saveUninitialized: true
 }));
 
-// app.use(methodOverride("_method"));
-
-//load assets
-// app.use('/css',express.static(path.resolve(__dirname,"Assets/css")))
-// app.use('/img',express.static(path.resolve(__dirname,"Assets/img")))
-// app.use('/js',express.static(path.resolve(__dirname,"Assets/js")))
-
 //load router
 app.use('/', require('./Server/Routes/router')); 
 
 //set static paths
 app.use(express.static(__dirname + '/Assets'));
 app.set('views', path.join(__dirname, 'views'));
-// app.use('/Admin',express.static(path.resolve(__dirname + '/views/Admin')));
-// app.use('/Faculty',express.static(path.resolve(__dirname + '/views/Faculty')));
-// app.use('/Student',express.static(path.resolve(__dirname + '/views/Student')));
-
-
-// Admin.plugin(passportLocalMongoose);
-// const User = mongoose.model("Admin", Admin);
-
-// // Set up Passport configuration
-// passport.use(new LocalStrategy(User.authenticate()));
-// passport.serializeUser(User.serializeUser());
-// passport.deserializeUser(User.deserializeUser());
-
-// // creating session
-
-// app.use(
-// 	session({
-// 	  name: "user-session", // Set a unique name for sessions
-// 	  secret: "your-secret-key",
-// 	  resave: false,
-// 	  saveUninitialized: false,
-// 	  // You can also specify additional session options here
-// 	})
-//   );
-
-// app.use(session({
-//     secret: 'your-secret-key',
-//     resave: false,
-//     saveUninitialized: true
-// }));
-
-// app.use(require("connect-flash")());
-
-// app.use(passport.initialize());
-// app.use(passport.session());
-
-
-// app.use(passport.initialize());
-// app.use(passport.session());
 
 passport.serializeUser((user, done) => {
     done(null, user.id);
